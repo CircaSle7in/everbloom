@@ -4,37 +4,103 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Everbloom — Forever in Bloom | Pressed Flower Preservation</title>
-<meta name="description" content="Everbloom preserves your most precious flowers — wedding bouquets, memorial blooms, and special occasion flowers — into timeless, handcrafted framed keepsakes.">
+<meta name="description" content="Everbloom preserves your most precious flowers — wedding bouquets, memorial blooms, and special occasion arrangements — into timeless, handcrafted pressed flower keepsakes.">
+<meta name="keywords" content="pressed flower preservation, wedding bouquet preservation, flower framing, memorial flowers, temple art, childhood keepsakes, pressed flower jewelry">
+
+<!-- Open Graph -->
+<meta property="og:title" content="Everbloom — Forever in Bloom">
+<meta property="og:description" content="Handcrafted pressed flower preservation. Wedding bouquets, memorial flowers, temple art, childhood keepsakes, and custom pieces.">
+<meta property="og:image" content="images/colorful-bouquet-wood-frame.jpg">
+<meta property="og:type" content="website">
+<meta property="og:locale" content="en_US">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Everbloom — Forever in Bloom">
+<meta name="twitter:description" content="Handcrafted pressed flower preservation. Wedding bouquets, memorial flowers, temple art & more.">
+<meta name="twitter:image" content="images/colorful-bouquet-wood-frame.jpg">
+
+<!-- Favicon (inline SVG) -->
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='12' r='5' fill='none' stroke='%236B7B3A' stroke-width='1.5'/><circle cx='11' cy='16' r='5' fill='none' stroke='%236B7B3A' stroke-width='1.5'/><circle cx='21' cy='16' r='5' fill='none' stroke='%236B7B3A' stroke-width='1.5'/><circle cx='16' cy='14' r='2.5' fill='%236B7B3A' opacity='0.3'/><line x1='16' y1='20' x2='16' y2='30' stroke='%236B7B3A' stroke-width='1.5'/></svg>">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400;1,500&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
+
+<!-- Structured Data -->
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "LocalBusiness",
+  "name": "Everbloom",
+  "description": "Handcrafted pressed flower preservation — wedding bouquets, memorial flowers, temple art, childhood keepsakes, and custom framed pieces.",
+  "url": "https://everbloom.com",
+  "image": "images/everbloom-logo.jpg",
+  "sameAs": ["https://instagram.com/_everbl00m_"],
+  "founder": {
+    "@type": "Person",
+    "name": "Melody"
+  },
+  "makesOffer": [
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Bouquet Preservation" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Childhood Keepsakes" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Temple Art" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Pressed Flower Jewelry" } },
+    { "@type": "Offer", "itemOffered": { "@type": "Product", "name": "Custom Frames" } }
+  ]
+}
+</script>
+
 <style>
+/* ===== CUSTOM PROPERTIES ===== */
+:root {
+  --parchment: #F5F0E8;
+  --sand: #D4C5A9;
+  --olive: #6B7B3A;
+  --sage: #A8B89A;
+  --bark: #5C4033;
+  --olivewood: #8B7355;
+  --cream: #FAF8F3;
+  --text: #3a3a3a;
+  --text-light: #555;
+  --font-heading: 'Playfair Display', Georgia, serif;
+  --font-body: 'Lato', -apple-system, sans-serif;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 16px;
+  --radius-xl: 20px;
+  --shadow-soft: 0 4px 20px rgba(92, 64, 51, 0.08);
+  --shadow-md: 0 10px 30px rgba(92, 64, 51, 0.12);
+  --shadow-lg: 0 20px 50px rgba(92, 64, 51, 0.15);
+}
+
 /* ===== RESET & BASE ===== */
 *, *::before, *::after { margin: 0; padding: 0; box-sizing: border-box; }
 html { scroll-behavior: smooth; font-size: 16px; }
 body {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 300;
-  color: #3a3a3a;
-  background: #F5F0E8;
+  color: var(--text);
+  background: var(--parchment);
   line-height: 1.7;
   overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
 }
 img { max-width: 100%; display: block; }
 a { color: inherit; text-decoration: none; }
 button { cursor: pointer; font-family: inherit; }
 
 /* ===== TYPOGRAPHY ===== */
-h1, h2, h3, h4, h5 { font-family: 'Playfair Display', serif; font-weight: 500; line-height: 1.25; color: #5C4033; }
+h1, h2, h3, h4, h5 { font-family: var(--font-heading); font-weight: 500; line-height: 1.25; color: var(--bark); }
 h1 { font-size: clamp(2.4rem, 5vw, 4rem); }
 h2 { font-size: clamp(1.8rem, 3.5vw, 2.8rem); }
 h3 { font-size: clamp(1.2rem, 2vw, 1.5rem); }
 p { margin-bottom: 1rem; }
 .section-subtitle {
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 300;
   font-size: 1.05rem;
-  color: #8B7355;
+  color: var(--olivewood);
   letter-spacing: 0.03em;
   max-width: 600px;
   margin: 0 auto 2.5rem;
@@ -44,11 +110,21 @@ p { margin-bottom: 1rem; }
 .container { max-width: 1200px; margin: 0 auto; padding: 0 24px; }
 .text-center { text-align: center; }
 .section-padding { padding: 100px 0; }
+.eyebrow {
+  font-family: var(--font-body);
+  font-weight: 700;
+  font-size: 0.75rem;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--olive);
+  margin-bottom: 12px;
+  display: inline-block;
+}
 .btn {
   display: inline-block;
   padding: 14px 36px;
   border-radius: 50px;
-  font-family: 'Lato', sans-serif;
+  font-family: var(--font-body);
   font-weight: 700;
   font-size: 0.9rem;
   letter-spacing: 0.08em;
@@ -56,25 +132,21 @@ p { margin-bottom: 1rem; }
   transition: all 0.35s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   border: none;
 }
-.btn-primary {
-  background: #6B7B3A;
-  color: #F5F0E8;
+.btn-primary { background: var(--olive); color: var(--parchment); }
+.btn-primary:hover { background: var(--bark); transform: translateY(-2px); box-shadow: 0 8px 25px rgba(92, 64, 51, 0.25); }
+.btn-secondary { background: transparent; color: var(--bark); border: 2px solid var(--bark); }
+.btn-secondary:hover { background: var(--bark); color: var(--parchment); transform: translateY(-2px); }
+.badge {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.7rem;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
 }
-.btn-primary:hover {
-  background: #5C4033;
-  transform: translateY(-2px);
-  box-shadow: 0 8px 25px rgba(92, 64, 51, 0.25);
-}
-.btn-secondary {
-  background: transparent;
-  color: #5C4033;
-  border: 2px solid #5C4033;
-}
-.btn-secondary:hover {
-  background: #5C4033;
-  color: #F5F0E8;
-  transform: translateY(-2px);
-}
+.badge-unique { background: var(--olive); color: var(--parchment); }
+.badge-exclusive { background: var(--bark); color: var(--parchment); }
 
 /* ===== SCROLL ANIMATIONS ===== */
 .reveal {
@@ -82,449 +154,184 @@ p { margin-bottom: 1rem; }
   transform: translateY(30px);
   transition: opacity 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94), transform 0.8s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.reveal.visible {
-  opacity: 1;
-  transform: translateY(0);
-}
+.reveal.visible { opacity: 1; transform: translateY(0); }
 .reveal-delay-1 { transition-delay: 0.1s; }
 .reveal-delay-2 { transition-delay: 0.2s; }
 .reveal-delay-3 { transition-delay: 0.3s; }
 .reveal-delay-4 { transition-delay: 0.4s; }
+.reveal-delay-5 { transition-delay: 0.5s; }
 
 /* ===== NAVIGATION ===== */
 .navbar {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  z-index: 1000;
-  padding: 20px 0;
+  position: fixed; top: 0; left: 0; width: 100%;
+  z-index: 1000; padding: 20px 0;
   transition: all 0.4s ease;
 }
 .navbar.scrolled {
   background: rgba(245, 240, 232, 0.95);
   backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   padding: 12px 0;
-  box-shadow: 0 2px 20px rgba(92, 64, 51, 0.08);
+  box-shadow: var(--shadow-soft);
 }
-.navbar .container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-}
-.nav-logo {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.6rem;
-  font-weight: 600;
-  color: #5C4033;
-  letter-spacing: 0.02em;
-}
-.nav-logo span { color: #6B7B3A; }
-.nav-links {
-  display: flex;
-  gap: 32px;
-  list-style: none;
-  align-items: center;
-}
+.navbar .container { display: flex; justify-content: space-between; align-items: center; }
+.nav-logo { display: flex; align-items: center; gap: 10px; }
+.nav-logo img { height: 40px; width: 40px; border-radius: 50%; object-fit: cover; }
+.nav-logo-text { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600; color: var(--bark); letter-spacing: 0.02em; }
+.nav-logo-text span { color: var(--olive); }
+.nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
 .nav-links a {
-  font-size: 0.85rem;
-  font-weight: 400;
-  letter-spacing: 0.06em;
-  text-transform: uppercase;
-  color: #5C4033;
-  position: relative;
-  transition: color 0.3s;
+  font-size: 0.85rem; font-weight: 400; letter-spacing: 0.06em;
+  text-transform: uppercase; color: var(--bark);
+  position: relative; transition: color 0.3s;
 }
 .nav-links a::after {
-  content: '';
-  position: absolute;
-  bottom: -4px;
-  left: 0;
-  width: 0;
-  height: 1.5px;
-  background: #6B7B3A;
-  transition: width 0.3s ease;
+  content: ''; position: absolute; bottom: -4px; left: 0;
+  width: 0; height: 1.5px; background: var(--olive); transition: width 0.3s ease;
 }
 .nav-links a:hover::after { width: 100%; }
-.nav-links a:hover { color: #6B7B3A; }
-.mobile-toggle {
-  display: none;
-  flex-direction: column;
-  gap: 5px;
-  background: none;
-  border: none;
-  cursor: pointer;
-  padding: 4px;
-}
-.mobile-toggle span {
-  display: block;
-  width: 24px;
-  height: 2px;
-  background: #5C4033;
-  border-radius: 2px;
-  transition: all 0.3s;
-}
+.nav-links a:hover { color: var(--olive); }
+.mobile-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; cursor: pointer; padding: 4px; }
+.mobile-toggle span { display: block; width: 24px; height: 2px; background: var(--bark); border-radius: 2px; transition: all 0.3s; }
 .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
 .mobile-toggle.active span:nth-child(2) { opacity: 0; }
 .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
 /* ===== HERO ===== */
-.hero {
-  min-height: 100vh;
-  display: flex;
-  align-items: center;
-  position: relative;
-  overflow: hidden;
-}
+.hero { min-height: 100vh; display: flex; align-items: center; position: relative; overflow: hidden; }
 .hero-bg {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background:
     radial-gradient(ellipse at 20% 50%, rgba(168, 184, 154, 0.35) 0%, transparent 60%),
     radial-gradient(ellipse at 80% 30%, rgba(212, 197, 169, 0.4) 0%, transparent 55%),
     radial-gradient(ellipse at 60% 80%, rgba(107, 123, 58, 0.12) 0%, transparent 50%),
-    linear-gradient(160deg, #F5F0E8 0%, #ece5d8 50%, #e8e0d0 100%);
+    linear-gradient(160deg, var(--parchment) 0%, #ece5d8 50%, #e8e0d0 100%);
   z-index: 0;
 }
-.hero-decoration {
-  position: absolute;
-  z-index: 1;
-  opacity: 0.08;
-}
-.hero-decoration.top-right {
-  top: -60px;
-  right: -60px;
-  width: 400px;
-  height: 400px;
-  border: 2px solid #6B7B3A;
-  border-radius: 50%;
-}
-.hero-decoration.bottom-left {
-  bottom: -80px;
-  left: -80px;
-  width: 500px;
-  height: 500px;
-  border: 2px solid #D4C5A9;
-  border-radius: 50%;
-}
-.hero .container {
-  position: relative;
-  z-index: 2;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
+.hero-decoration { position: absolute; z-index: 1; opacity: 0.08; }
+.hero-decoration.top-right { top: -60px; right: -60px; width: 400px; height: 400px; border: 2px solid var(--olive); border-radius: 50%; }
+.hero-decoration.bottom-left { bottom: -80px; left: -80px; width: 500px; height: 500px; border: 2px solid var(--sand); border-radius: 50%; }
+.hero .container { position: relative; z-index: 2; display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .hero-content { max-width: 560px; }
-.hero-eyebrow {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #6B7B3A;
-  margin-bottom: 16px;
-  display: inline-block;
-}
-.hero h1 {
-  margin-bottom: 20px;
-  line-height: 1.15;
-}
-.hero h1 em {
-  font-style: italic;
-  color: #6B7B3A;
-}
-.hero-text {
-  font-size: 1.1rem;
-  color: #8B7355;
-  margin-bottom: 36px;
-  line-height: 1.8;
-}
-.hero-ctas {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-.hero-image-wrapper {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-}
+.hero h1 { margin-bottom: 20px; line-height: 1.15; }
+.hero h1 em { font-style: italic; color: var(--olive); }
+.hero-text { font-size: 1.1rem; color: var(--olivewood); margin-bottom: 36px; line-height: 1.8; }
+.hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
+.hero-image-wrapper { display: flex; justify-content: center; align-items: center; }
 .hero-image-frame {
-  width: 420px;
-  height: 520px;
+  width: 420px; height: 520px;
   border-radius: 200px 200px 20px 20px;
-  background: linear-gradient(145deg, #A8B89A 0%, #6B7B3A 40%, #5C4033 100%);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 30px 60px rgba(92, 64, 51, 0.15), 0 10px 20px rgba(92, 64, 51, 0.08);
+  position: relative; overflow: hidden;
+  box-shadow: var(--shadow-lg);
 }
-.hero-image-frame::before {
-  content: '';
-  position: absolute;
-  inset: 8px;
-  border-radius: 196px 196px 16px 16px;
-  border: 1px solid rgba(245, 240, 232, 0.2);
-}
-.hero-image-inner {
-  position: absolute;
-  inset: 0;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  color: rgba(245, 240, 232, 0.6);
-  font-family: 'Playfair Display', serif;
-  padding: 40px;
-  text-align: center;
-}
-.hero-flower-icon {
-  width: 80px;
-  height: 80px;
-  margin-bottom: 20px;
-  opacity: 0.5;
-}
-.hero-image-inner span {
-  font-size: 0.85rem;
-  font-family: 'Lato', sans-serif;
-  letter-spacing: 0.1em;
-  text-transform: uppercase;
-}
+.hero-image-frame img { width: 100%; height: 100%; object-fit: cover; }
 .hero-scroll-indicator {
-  position: absolute;
-  bottom: 40px;
-  left: 50%;
-  transform: translateX(-50%);
-  z-index: 3;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  gap: 8px;
-  color: #8B7355;
-  font-size: 0.7rem;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
+  position: absolute; bottom: 40px; left: 50%; transform: translateX(-50%);
+  z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 8px;
+  color: var(--olivewood); font-size: 0.7rem; letter-spacing: 0.15em; text-transform: uppercase;
   animation: float 2.5s ease-in-out infinite;
 }
-.scroll-line {
-  width: 1px;
-  height: 40px;
-  background: linear-gradient(to bottom, #8B7355, transparent);
-}
-@keyframes float {
-  0%, 100% { transform: translateX(-50%) translateY(0); }
-  50% { transform: translateX(-50%) translateY(8px); }
-}
+.scroll-line { width: 1px; height: 40px; background: linear-gradient(to bottom, var(--olivewood), transparent); }
+@keyframes float { 0%, 100% { transform: translateX(-50%) translateY(0); } 50% { transform: translateX(-50%) translateY(8px); } }
 
 /* ===== HOW IT WORKS ===== */
 .how-it-works { background: #fff; }
-.steps-grid {
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  gap: 40px;
-  position: relative;
-}
+.steps-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 40px; position: relative; }
 .steps-grid::before {
-  content: '';
-  position: absolute;
-  top: 50px;
-  left: 12.5%;
-  width: 75%;
-  height: 2px;
-  background: linear-gradient(to right, transparent, #D4C5A9, #A8B89A, #D4C5A9, transparent);
+  content: ''; position: absolute; top: 50px; left: 12.5%; width: 75%; height: 2px;
+  background: linear-gradient(to right, transparent, var(--sand), var(--sage), var(--sand), transparent);
   z-index: 0;
 }
-.step-card {
-  text-align: center;
-  position: relative;
-  z-index: 1;
-}
+.step-card { text-align: center; position: relative; z-index: 1; }
 .step-number {
-  width: 100px;
-  height: 100px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #F5F0E8, #ece5d8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 auto 24px;
-  border: 2px solid #D4C5A9;
-  transition: all 0.4s;
+  width: 100px; height: 100px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--parchment), #ece5d8);
+  display: flex; align-items: center; justify-content: center;
+  margin: 0 auto 24px; border: 2px solid var(--sand); transition: all 0.4s;
 }
-.step-card:hover .step-number {
-  background: linear-gradient(135deg, #6B7B3A, #5C4033);
-  border-color: #6B7B3A;
-}
-.step-card:hover .step-number svg { stroke: #F5F0E8; }
-.step-number svg {
-  width: 36px;
-  height: 36px;
-  stroke: #6B7B3A;
-  stroke-width: 1.5;
-  fill: none;
-  transition: stroke 0.4s;
-}
-.step-label {
-  font-family: 'Lato', sans-serif;
-  font-size: 0.7rem;
-  font-weight: 700;
-  letter-spacing: 0.15em;
-  text-transform: uppercase;
-  color: #A8B89A;
-  margin-bottom: 8px;
-}
+.step-card:hover .step-number { background: linear-gradient(135deg, var(--olive), var(--bark)); border-color: var(--olive); }
+.step-card:hover .step-number svg { stroke: var(--parchment); }
+.step-number svg { width: 36px; height: 36px; stroke: var(--olive); stroke-width: 1.5; fill: none; transition: stroke 0.4s; }
+.step-label { font-family: var(--font-body); font-size: 0.7rem; font-weight: 700; letter-spacing: 0.15em; text-transform: uppercase; color: var(--sage); margin-bottom: 8px; }
 .step-card h3 { margin-bottom: 10px; }
-.step-card p { font-size: 0.92rem; color: #8B7355; }
+.step-card p { font-size: 0.92rem; color: var(--olivewood); }
 
 /* ===== PRODUCT CATEGORIES ===== */
 .categories-grid {
   display: grid;
-  grid-template-columns: repeat(2, 1fr);
+  grid-template-columns: repeat(3, 1fr);
   gap: 24px;
 }
-.category-card {
-  position: relative;
-  border-radius: 16px;
-  overflow: hidden;
-  aspect-ratio: 4/3;
-  cursor: pointer;
-  group: true;
+.categories-grid .category-card:nth-child(4),
+.categories-grid .category-card:nth-child(5) {
+  /* Last two cards span the bottom row */
 }
-.category-bg {
-  position: absolute;
-  inset: 0;
+.category-card {
+  position: relative; border-radius: var(--radius-lg); overflow: hidden;
+  aspect-ratio: 4/3; cursor: pointer;
+}
+.category-card img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.category-card:hover .category-bg { transform: scale(1.05); }
-.category-card:nth-child(1) .category-bg {
-  background: linear-gradient(135deg, #A8B89A 0%, #6B7B3A 60%, #4a5c28 100%);
-}
-.category-card:nth-child(2) .category-bg {
-  background: linear-gradient(135deg, #D4C5A9 0%, #8B7355 60%, #5C4033 100%);
-}
-.category-card:nth-child(3) .category-bg {
-  background: linear-gradient(135deg, #e8d5c0 0%, #c4a882 60%, #8B7355 100%);
-}
-.category-card:nth-child(4) .category-bg {
-  background: linear-gradient(135deg, #b8c4a0 0%, #7a8a50 60%, #6B7B3A 100%);
-}
+.category-card:hover img { transform: scale(1.05); }
 .category-overlay {
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(to top, rgba(92, 64, 51, 0.7) 0%, rgba(92, 64, 51, 0.1) 60%, transparent 100%);
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  padding: 32px;
-  z-index: 1;
+  position: absolute; inset: 0;
+  background: linear-gradient(to top, rgba(92, 64, 51, 0.75) 0%, rgba(92, 64, 51, 0.15) 50%, transparent 100%);
+  display: flex; flex-direction: column; justify-content: flex-end;
+  padding: 28px; z-index: 1;
 }
-.category-icon {
-  width: 48px;
-  height: 48px;
-  margin-bottom: 12px;
-  opacity: 0.85;
-}
-.category-overlay h3 {
-  color: #F5F0E8;
-  margin-bottom: 6px;
-  font-size: 1.4rem;
-}
-.category-overlay p {
-  color: rgba(245, 240, 232, 0.8);
-  font-size: 0.9rem;
-  margin: 0;
-}
+.category-overlay h3 { color: var(--parchment); margin-bottom: 6px; font-size: 1.3rem; }
+.category-overlay p { color: rgba(245, 240, 232, 0.85); font-size: 0.88rem; margin: 0; }
+.category-badges { display: flex; gap: 8px; margin-bottom: 10px; }
 .category-arrow {
-  position: absolute;
-  top: 24px;
-  right: 24px;
-  width: 44px;
-  height: 44px;
-  border-radius: 50%;
-  background: rgba(245, 240, 232, 0.15);
-  backdrop-filter: blur(4px);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  z-index: 2;
-  transition: all 0.3s;
+  position: absolute; top: 20px; right: 20px;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(245, 240, 232, 0.15); backdrop-filter: blur(4px);
+  display: flex; align-items: center; justify-content: center;
+  z-index: 2; transition: all 0.3s;
 }
-.category-card:hover .category-arrow {
-  background: rgba(245, 240, 232, 0.3);
-  transform: translate(3px, -3px);
-}
-.category-arrow svg { stroke: #F5F0E8; width: 18px; height: 18px; stroke-width: 2; fill: none; }
+.category-card:hover .category-arrow { background: rgba(245, 240, 232, 0.3); transform: translate(3px, -3px); }
+.category-arrow svg { stroke: var(--parchment); width: 16px; height: 16px; stroke-width: 2; fill: none; }
 
 /* ===== FRAME CONFIGURATOR ===== */
 .configurator { background: #fff; }
-.configurator-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: start;
-}
-.config-preview {
-  position: sticky;
-  top: 120px;
-}
+.configurator-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: start; }
+.config-preview { position: sticky; top: 120px; }
 .preview-frame {
-  aspect-ratio: 3/4;
-  border-radius: 12px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-  transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  aspect-ratio: 3/4; border-radius: var(--radius-md);
+  display: flex; align-items: center; justify-content: center;
+  position: relative; transition: all 0.5s cubic-bezier(0.25, 0.46, 0.45, 0.94);
   overflow: hidden;
 }
-.frame-oak { background: linear-gradient(145deg, #c4a46c, #a8884a); box-shadow: inset 0 0 0 18px #b8964e, inset 0 0 0 20px rgba(0,0,0,0.1), 0 20px 50px rgba(92, 64, 51, 0.2); }
-.frame-walnut { background: linear-gradient(145deg, #6B5240, #5C4033); box-shadow: inset 0 0 0 18px #604838, inset 0 0 0 20px rgba(0,0,0,0.15), 0 20px 50px rgba(92, 64, 51, 0.2); }
-.frame-maple { background: linear-gradient(145deg, #e8d5b8, #d4bf9a); box-shadow: inset 0 0 0 18px #dcc8a8, inset 0 0 0 20px rgba(0,0,0,0.05), 0 20px 50px rgba(92, 64, 51, 0.15); }
+.frame-gold { background: linear-gradient(145deg, #d4b06a, #c4a050); box-shadow: inset 0 0 0 18px #c8a858, inset 0 0 0 20px rgba(0,0,0,0.08), var(--shadow-lg); }
+.frame-natural { background: linear-gradient(145deg, #c4a46c, #a8884a); box-shadow: inset 0 0 0 18px #b8964e, inset 0 0 0 20px rgba(0,0,0,0.1), var(--shadow-lg); }
+.frame-white { background: linear-gradient(145deg, #f0ede8, #e5e0d8); box-shadow: inset 0 0 0 18px #eae5dd, inset 0 0 0 20px rgba(0,0,0,0.04), var(--shadow-lg); }
 .frame-black { background: linear-gradient(145deg, #2a2a2a, #1a1a1a); box-shadow: inset 0 0 0 18px #222, inset 0 0 0 20px rgba(255,255,255,0.05), 0 20px 50px rgba(0,0,0,0.3); }
 .preview-inner {
-  position: absolute;
-  inset: 28px;
-  border-radius: 4px;
-  background: #F5F0E8;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-  gap: 12px;
+  position: absolute; inset: 28px; border-radius: 4px;
+  display: flex; align-items: center; justify-content: center;
+  flex-direction: column; gap: 12px; overflow: hidden;
 }
-.preview-flowers {
-  transition: all 0.4s;
-}
-.layout-centered .preview-flowers { text-align: center; }
-.layout-scattered .preview-flowers { text-align: center; }
-.layout-wreath .preview-flowers { text-align: center; }
-.layout-cascade .preview-flowers { text-align: center; }
+.preview-inner.single-glass { background: var(--parchment); }
+.preview-inner.double-glass { background: transparent; border: 1px solid rgba(200,200,200,0.3); }
+.preview-flowers { transition: all 0.4s; }
 .flower-placeholder {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 8px;
-  justify-content: center;
-  max-width: 200px;
-  margin: 0 auto;
-  transition: all 0.5s;
+  display: flex; flex-wrap: wrap; gap: 8px; justify-content: center;
+  max-width: 200px; margin: 0 auto; transition: all 0.5s;
 }
-.flower-dot {
-  width: 24px;
-  height: 24px;
-  border-radius: 50%;
-  transition: all 0.5s;
-}
-.flower-dot:nth-child(1) { background: #A8B89A; }
-.flower-dot:nth-child(2) { background: #D4C5A9; }
-.flower-dot:nth-child(3) { background: #6B7B3A; }
-.flower-dot:nth-child(4) { background: #8B7355; }
+.flower-dot { width: 24px; height: 24px; border-radius: 50%; transition: all 0.5s; }
+.flower-dot:nth-child(1) { background: var(--sage); }
+.flower-dot:nth-child(2) { background: var(--sand); }
+.flower-dot:nth-child(3) { background: var(--olive); }
+.flower-dot:nth-child(4) { background: var(--olivewood); }
 .flower-dot:nth-child(5) { background: #b8c4a0; }
 .flower-dot:nth-child(6) { background: #c4a882; }
-.flower-dot:nth-child(7) { background: #A8B89A; opacity: 0.7; }
-.flower-dot:nth-child(8) { background: #6B7B3A; opacity: 0.7; }
+.flower-dot:nth-child(7) { background: var(--sage); opacity: 0.7; }
+.flower-dot:nth-child(8) { background: var(--olive); opacity: 0.7; }
 .layout-scattered .flower-dot:nth-child(odd) { transform: translate(8px, -4px); }
 .layout-scattered .flower-dot:nth-child(even) { transform: translate(-6px, 6px); }
-.layout-wreath .flower-placeholder { border-radius: 50%; width: 160px; height: 160px; border: 3px dashed #D4C5A9; padding: 12px; align-content: center; }
+.layout-wreath .flower-placeholder { border-radius: 50%; width: 160px; height: 160px; border: 3px dashed var(--sand); padding: 12px; align-content: center; }
 .layout-cascade .flower-dot:nth-child(1) { transform: translateX(-20px); }
 .layout-cascade .flower-dot:nth-child(2) { transform: translateX(-12px); }
 .layout-cascade .flower-dot:nth-child(3) { transform: translateX(-4px); }
@@ -532,420 +339,179 @@ p { margin-bottom: 1rem; }
 .layout-cascade .flower-dot:nth-child(6) { transform: translateX(12px); }
 .layout-cascade .flower-dot:nth-child(7) { transform: translateX(20px); }
 .layout-cascade .flower-dot:nth-child(8) { transform: translateX(28px); }
-.preview-label {
-  font-family: 'Playfair Display', serif;
-  font-size: 0.85rem;
-  color: #8B7355;
-  font-style: italic;
-}
+.preview-label { font-family: var(--font-heading); font-size: 0.85rem; color: var(--olivewood); font-style: italic; }
 .config-options h2 { margin-bottom: 8px; }
-.config-intro { color: #8B7355; margin-bottom: 32px; }
+.config-intro { color: var(--olivewood); margin-bottom: 32px; }
 .config-group { margin-bottom: 32px; }
 .config-group label {
-  display: block;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #5C4033;
-  margin-bottom: 12px;
+  display: block; font-weight: 700; font-size: 0.75rem;
+  letter-spacing: 0.12em; text-transform: uppercase; color: var(--bark); margin-bottom: 12px;
 }
-.option-grid {
-  display: flex;
-  gap: 10px;
-  flex-wrap: wrap;
-}
+.option-grid { display: flex; gap: 10px; flex-wrap: wrap; }
 .option-btn {
-  padding: 10px 20px;
-  border-radius: 8px;
-  border: 2px solid #e0d8cc;
-  background: #F5F0E8;
-  font-size: 0.88rem;
-  color: #5C4033;
-  transition: all 0.25s;
-  font-weight: 400;
+  padding: 10px 20px; border-radius: var(--radius-sm);
+  border: 2px solid #e0d8cc; background: var(--parchment);
+  font-size: 0.88rem; color: var(--bark);
+  transition: all 0.25s; font-weight: 400;
 }
-.option-btn:hover { border-color: #A8B89A; }
-.option-btn.active {
-  border-color: #6B7B3A;
-  background: rgba(107, 123, 58, 0.08);
-  color: #6B7B3A;
-  font-weight: 700;
-}
+.option-btn:hover { border-color: var(--sage); }
+.option-btn.active { border-color: var(--olive); background: rgba(107, 123, 58, 0.08); color: var(--olive); font-weight: 700; }
+.glass-note { font-size: 0.82rem; color: var(--olivewood); margin-top: 8px; font-style: italic; }
 .price-display {
-  background: linear-gradient(135deg, #F5F0E8, #ece5d8);
-  border-radius: 16px;
-  padding: 32px;
-  text-align: center;
-  border: 1px solid #e0d8cc;
+  background: linear-gradient(135deg, var(--parchment), #ece5d8);
+  border-radius: var(--radius-lg); padding: 32px; text-align: center; border: 1px solid #e0d8cc;
 }
-.price-label {
-  font-size: 0.75rem;
-  font-weight: 700;
-  letter-spacing: 0.12em;
-  text-transform: uppercase;
-  color: #8B7355;
-  margin-bottom: 4px;
-}
-.price-value {
-  font-family: 'Playfair Display', serif;
-  font-size: 2.8rem;
-  color: #5C4033;
-  font-weight: 600;
-  margin-bottom: 8px;
-}
-.price-note {
-  font-size: 0.82rem;
-  color: #8B7355;
-  margin-bottom: 20px;
-}
+.price-label { font-size: 0.75rem; font-weight: 700; letter-spacing: 0.12em; text-transform: uppercase; color: var(--olivewood); margin-bottom: 4px; }
+.price-value { font-family: var(--font-heading); font-size: 2.8rem; color: var(--bark); font-weight: 600; margin-bottom: 8px; }
+.price-note { font-size: 0.82rem; color: var(--olivewood); margin-bottom: 20px; }
 .price-display .btn { width: 100%; text-align: center; }
 
 /* ===== GALLERY ===== */
-.gallery-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 20px;
-}
-.gallery-item {
-  border-radius: 12px;
-  overflow: hidden;
-  position: relative;
-  cursor: pointer;
-}
+.gallery-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.gallery-item { border-radius: var(--radius-md); overflow: hidden; position: relative; cursor: pointer; }
 .gallery-item:nth-child(1) { grid-row: span 2; }
-.gallery-thumb {
-  width: 100%;
-  height: 100%;
-  min-height: 250px;
+.gallery-item img {
+  width: 100%; height: 100%; object-fit: cover; min-height: 250px;
   transition: transform 0.6s cubic-bezier(0.25, 0.46, 0.45, 0.94);
 }
-.gallery-item:nth-child(1) .gallery-thumb { min-height: 520px; }
-.gallery-item:nth-child(1) .gallery-thumb { background: linear-gradient(160deg, #A8B89A 0%, #6B7B3A 50%, #4a5c28 100%); }
-.gallery-item:nth-child(2) .gallery-thumb { background: linear-gradient(160deg, #e8d5c0 0%, #D4C5A9 50%, #c4a882 100%); }
-.gallery-item:nth-child(3) .gallery-thumb { background: linear-gradient(160deg, #d4c0a8 0%, #8B7355 50%, #5C4033 100%); }
-.gallery-item:nth-child(4) .gallery-thumb { background: linear-gradient(160deg, #c8d4b8 0%, #A8B89A 50%, #8aa07a 100%); }
-.gallery-item:nth-child(5) .gallery-thumb { background: linear-gradient(160deg, #e0d5c5 0%, #c4b49a 50%, #8B7355 100%); }
-.gallery-item:nth-child(6) .gallery-thumb { background: linear-gradient(160deg, #b8c8a0 0%, #7a8a50 50%, #6B7B3A 100%); }
-.gallery-item:hover .gallery-thumb { transform: scale(1.05); }
+.gallery-item:nth-child(1) img { min-height: 520px; }
+.gallery-item:hover img { transform: scale(1.05); }
 .gallery-overlay {
-  position: absolute;
-  inset: 0;
+  position: absolute; inset: 0;
   background: rgba(92, 64, 51, 0);
   transition: background 0.4s;
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 8px;
 }
-.gallery-item:hover .gallery-overlay {
-  background: rgba(92, 64, 51, 0.3);
-}
+.gallery-item:hover .gallery-overlay { background: rgba(92, 64, 51, 0.35); }
 .gallery-overlay svg {
-  width: 40px;
-  height: 40px;
-  stroke: #F5F0E8;
-  stroke-width: 1.5;
-  fill: none;
-  opacity: 0;
-  transform: scale(0.7);
-  transition: all 0.3s;
+  width: 40px; height: 40px; stroke: var(--parchment); stroke-width: 1.5; fill: none;
+  opacity: 0; transform: scale(0.7); transition: all 0.3s;
 }
-.gallery-item:hover .gallery-overlay svg {
-  opacity: 1;
-  transform: scale(1);
+.gallery-item:hover .gallery-overlay svg { opacity: 1; transform: scale(1); }
+.gallery-label {
+  color: var(--parchment); font-size: 0.85rem; font-weight: 700;
+  letter-spacing: 0.05em; text-transform: uppercase;
+  opacity: 0; transition: opacity 0.3s;
 }
-/* Decorative SVG flower elements in gallery */
-.gallery-thumb-content {
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  position: relative;
-}
-.gallery-thumb-content svg {
-  width: 60%;
-  height: 60%;
-  opacity: 0.15;
-}
+.gallery-item:hover .gallery-label { opacity: 1; }
 
 /* ===== SHIPPING GUIDE ===== */
 .shipping { background: #fff; }
-.shipping-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
+.shipping-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .shipping-steps { display: flex; flex-direction: column; gap: 28px; }
-.shipping-step {
-  display: flex;
-  gap: 20px;
-  align-items: flex-start;
-}
+.shipping-step { display: flex; gap: 20px; align-items: flex-start; }
 .shipping-icon {
-  flex-shrink: 0;
-  width: 56px;
-  height: 56px;
-  border-radius: 14px;
-  background: linear-gradient(135deg, #F5F0E8, #ece5d8);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  border: 1px solid #e0d8cc;
+  flex-shrink: 0; width: 56px; height: 56px; border-radius: 14px;
+  background: linear-gradient(135deg, var(--parchment), #ece5d8);
+  display: flex; align-items: center; justify-content: center; border: 1px solid #e0d8cc;
 }
-.shipping-icon svg { width: 24px; height: 24px; stroke: #6B7B3A; stroke-width: 1.5; fill: none; }
+.shipping-icon svg { width: 24px; height: 24px; stroke: var(--olive); stroke-width: 1.5; fill: none; }
 .shipping-step h3 { margin-bottom: 4px; font-size: 1.15rem; }
-.shipping-step p { font-size: 0.92rem; color: #8B7355; margin: 0; }
+.shipping-step p { font-size: 0.92rem; color: var(--olivewood); margin: 0; }
 .shipping-image {
-  border-radius: 20px;
-  aspect-ratio: 4/5;
-  background: linear-gradient(155deg, #e8e0d0, #D4C5A9 40%, #A8B89A 80%, #6B7B3A 100%);
-  position: relative;
-  overflow: hidden;
-  box-shadow: 0 20px 50px rgba(92, 64, 51, 0.12);
+  border-radius: var(--radius-xl); aspect-ratio: 4/5; position: relative; overflow: hidden;
+  box-shadow: var(--shadow-md);
 }
-.shipping-image::before {
-  content: '';
-  position: absolute;
-  inset: 16px;
-  border: 1px solid rgba(245, 240, 232, 0.3);
-  border-radius: 12px;
-}
+.shipping-image img { width: 100%; height: 100%; object-fit: cover; }
 .shipping-badge {
-  position: absolute;
-  bottom: 24px;
-  left: 24px;
-  background: rgba(245, 240, 232, 0.9);
-  backdrop-filter: blur(8px);
-  padding: 16px 24px;
-  border-radius: 12px;
+  position: absolute; bottom: 24px; left: 24px;
+  background: rgba(245, 240, 232, 0.92); backdrop-filter: blur(8px);
+  padding: 16px 24px; border-radius: var(--radius-md);
 }
-.shipping-badge strong {
-  display: block;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  color: #5C4033;
-}
-.shipping-badge span { font-size: 0.82rem; color: #8B7355; }
+.shipping-badge strong { display: block; font-family: var(--font-heading); font-size: 1.1rem; color: var(--bark); }
+.shipping-badge span { font-size: 0.82rem; color: var(--olivewood); }
 
 /* ===== ABOUT ===== */
-.about-layout {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 60px;
-  align-items: center;
-}
+.about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .about-image {
-  border-radius: 20px;
-  aspect-ratio: 3/4;
-  background: linear-gradient(145deg, #D4C5A9 0%, #A8B89A 50%, #8B7355 100%);
-  position: relative;
-  box-shadow: 0 20px 50px rgba(92, 64, 51, 0.12);
+  border-radius: var(--radius-xl); aspect-ratio: 3/4; position: relative;
+  overflow: hidden; box-shadow: var(--shadow-md);
 }
+.about-image img { width: 100%; height: 100%; object-fit: cover; }
 .about-accent {
-  position: absolute;
-  bottom: -20px;
-  right: -20px;
-  width: 180px;
-  height: 180px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #6B7B3A, #A8B89A);
-  opacity: 0.15;
-  z-index: -1;
-}
-.about-eyebrow {
-  font-family: 'Lato', sans-serif;
-  font-weight: 700;
-  font-size: 0.75rem;
-  letter-spacing: 0.2em;
-  text-transform: uppercase;
-  color: #6B7B3A;
-  margin-bottom: 12px;
+  position: absolute; bottom: -20px; right: -20px;
+  width: 180px; height: 180px; border-radius: 50%;
+  background: linear-gradient(135deg, var(--olive), var(--sage));
+  opacity: 0.15; z-index: -1;
 }
 .about-content h2 { margin-bottom: 20px; }
-.about-content p { color: #8B7355; }
-.about-signature {
-  font-family: 'Playfair Display', serif;
-  font-style: italic;
-  font-size: 1.3rem;
-  color: #5C4033;
-  margin-top: 24px;
-}
+.about-content p { color: var(--olivewood); }
+.about-signature { font-family: var(--font-heading); font-style: italic; font-size: 1.3rem; color: var(--bark); margin-top: 24px; }
 
 /* ===== TESTIMONIALS ===== */
 .testimonials { background: #fff; }
-.testimonials-grid {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 28px;
-}
-.testimonial-card {
-  background: #F5F0E8;
-  border-radius: 16px;
-  padding: 36px;
-  position: relative;
-}
+.testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 28px; }
+.testimonial-card { background: var(--parchment); border-radius: var(--radius-lg); padding: 36px; position: relative; }
 .testimonial-card::before {
-  content: '\201C';
-  font-family: 'Playfair Display', serif;
-  font-size: 5rem;
-  color: #D4C5A9;
-  position: absolute;
-  top: 16px;
-  left: 28px;
-  line-height: 1;
+  content: '\201C'; font-family: var(--font-heading); font-size: 5rem;
+  color: var(--sand); position: absolute; top: 16px; left: 28px; line-height: 1;
 }
-.testimonial-text {
-  font-size: 0.95rem;
-  color: #5C4033;
-  line-height: 1.8;
-  margin-bottom: 24px;
-  position: relative;
-  z-index: 1;
-  padding-top: 20px;
-}
-.testimonial-author {
-  display: flex;
-  align-items: center;
-  gap: 14px;
-}
+.testimonial-text { font-size: 0.95rem; color: var(--bark); line-height: 1.8; margin-bottom: 24px; position: relative; z-index: 1; padding-top: 20px; }
+.testimonial-author { display: flex; align-items: center; gap: 14px; }
 .testimonial-avatar {
-  width: 48px;
-  height: 48px;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: 'Playfair Display', serif;
-  font-size: 1.1rem;
-  color: #F5F0E8;
-  font-weight: 600;
+  width: 48px; height: 48px; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-family: var(--font-heading); font-size: 1.1rem; color: var(--parchment); font-weight: 600;
 }
-.testimonial-card:nth-child(1) .testimonial-avatar { background: #6B7B3A; }
-.testimonial-card:nth-child(2) .testimonial-avatar { background: #8B7355; }
-.testimonial-card:nth-child(3) .testimonial-avatar { background: #A8B89A; }
-.testimonial-name {
-  font-weight: 700;
-  font-size: 0.9rem;
-  color: #5C4033;
+.testimonial-card:nth-child(1) .testimonial-avatar { background: var(--olive); }
+.testimonial-card:nth-child(2) .testimonial-avatar { background: var(--olivewood); }
+.testimonial-card:nth-child(3) .testimonial-avatar { background: var(--sage); }
+.testimonial-name { font-weight: 700; font-size: 0.9rem; color: var(--bark); }
+.testimonial-detail { font-size: 0.8rem; color: var(--olivewood); }
+.stars { color: var(--sand); font-size: 0.85rem; letter-spacing: 2px; margin-bottom: 4px; }
+
+/* ===== CTA BANNER ===== */
+.cta-banner {
+  background: linear-gradient(135deg, var(--olive), var(--bark));
+  padding: 80px 0; text-align: center;
 }
-.testimonial-detail {
-  font-size: 0.8rem;
-  color: #8B7355;
-}
-.stars {
-  color: #D4C5A9;
-  font-size: 0.85rem;
-  letter-spacing: 2px;
-  margin-bottom: 4px;
-}
+.cta-banner h2 { color: var(--parchment); margin-bottom: 16px; }
+.cta-banner p { color: rgba(245, 240, 232, 0.8); max-width: 500px; margin: 0 auto 32px; }
+.cta-banner .btn-primary { background: var(--parchment); color: var(--bark); }
+.cta-banner .btn-primary:hover { background: #fff; box-shadow: 0 8px 25px rgba(0,0,0,0.2); }
 
 /* ===== FOOTER ===== */
-.footer {
-  background: #5C4033;
-  color: rgba(245, 240, 232, 0.75);
-  padding: 80px 0 0;
-}
-.footer-grid {
-  display: grid;
-  grid-template-columns: 2fr 1fr 1fr 1.5fr;
-  gap: 48px;
-  margin-bottom: 60px;
-}
-.footer h4 {
-  color: #F5F0E8;
-  font-size: 1rem;
-  margin-bottom: 20px;
-}
-.footer-brand-name {
-  font-family: 'Playfair Display', serif;
-  font-size: 1.8rem;
-  color: #F5F0E8;
-  margin-bottom: 12px;
-  font-weight: 600;
-}
-.footer-brand-name span { color: #A8B89A; }
-.footer-brand p {
-  font-size: 0.9rem;
-  line-height: 1.8;
-  margin-bottom: 20px;
-}
-.footer-social {
-  display: flex;
-  gap: 12px;
-}
+.footer { background: var(--bark); color: rgba(245, 240, 232, 0.75); padding: 80px 0 0; }
+.footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; margin-bottom: 60px; }
+.footer h4 { color: var(--parchment); font-size: 1rem; margin-bottom: 20px; }
+.footer-brand-name { font-family: var(--font-heading); font-size: 1.8rem; color: var(--parchment); margin-bottom: 12px; font-weight: 600; }
+.footer-brand-name span { color: var(--sage); }
+.footer-brand p { font-size: 0.9rem; line-height: 1.8; margin-bottom: 20px; }
+.footer-social { display: flex; gap: 12px; }
 .footer-social a {
-  width: 40px;
-  height: 40px;
-  border-radius: 50%;
+  width: 40px; height: 40px; border-radius: 50%;
   border: 1px solid rgba(245, 240, 232, 0.2);
-  display: flex;
-  align-items: center;
-  justify-content: center;
+  display: flex; align-items: center; justify-content: center;
   transition: all 0.3s;
 }
-.footer-social a:hover {
-  background: rgba(245, 240, 232, 0.1);
-  border-color: #A8B89A;
-}
-.footer-social svg {
-  width: 16px;
-  height: 16px;
-  stroke: rgba(245, 240, 232, 0.7);
-  stroke-width: 2;
-  fill: none;
-}
+.footer-social a:hover { background: rgba(245, 240, 232, 0.1); border-color: var(--sage); }
+.footer-social svg { width: 16px; height: 16px; stroke: rgba(245, 240, 232, 0.7); stroke-width: 2; fill: none; }
 .footer-links { list-style: none; }
 .footer-links li { margin-bottom: 10px; }
-.footer-links a {
-  font-size: 0.88rem;
-  transition: color 0.3s;
-}
-.footer-links a:hover { color: #A8B89A; }
-.newsletter-form {
-  display: flex;
-  gap: 8px;
-  margin-top: 4px;
-}
+.footer-links a { font-size: 0.88rem; transition: color 0.3s; }
+.footer-links a:hover { color: var(--sage); }
+.newsletter-form { display: flex; gap: 8px; margin-top: 4px; }
 .newsletter-form input {
-  flex: 1;
-  padding: 12px 18px;
-  border-radius: 50px;
-  border: 1px solid rgba(245, 240, 232, 0.2);
-  background: rgba(245, 240, 232, 0.08);
-  color: #F5F0E8;
-  font-family: 'Lato', sans-serif;
-  font-size: 0.88rem;
-  outline: none;
-  transition: border-color 0.3s;
+  flex: 1; padding: 12px 18px; border-radius: 50px;
+  border: 1px solid rgba(245, 240, 232, 0.2); background: rgba(245, 240, 232, 0.08);
+  color: var(--parchment); font-family: var(--font-body); font-size: 0.88rem;
+  outline: none; transition: border-color 0.3s;
 }
 .newsletter-form input::placeholder { color: rgba(245, 240, 232, 0.4); }
-.newsletter-form input:focus { border-color: #A8B89A; }
+.newsletter-form input:focus { border-color: var(--sage); }
 .newsletter-form button {
-  padding: 12px 24px;
-  border-radius: 50px;
-  background: #6B7B3A;
-  color: #F5F0E8;
-  border: none;
-  font-size: 0.8rem;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-  text-transform: uppercase;
-  transition: background 0.3s;
+  padding: 12px 24px; border-radius: 50px; background: var(--olive);
+  color: var(--parchment); border: none; font-size: 0.8rem; font-weight: 700;
+  letter-spacing: 0.08em; text-transform: uppercase; transition: background 0.3s;
 }
 .newsletter-form button:hover { background: #7a8d44; }
 .footer-bottom {
-  border-top: 1px solid rgba(245, 240, 232, 0.1);
-  padding: 24px 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  font-size: 0.8rem;
+  border-top: 1px solid rgba(245, 240, 232, 0.1); padding: 24px 0;
+  display: flex; justify-content: space-between; align-items: center; font-size: 0.8rem;
 }
 .footer-bottom-links { display: flex; gap: 24px; }
 .footer-bottom-links a { transition: color 0.3s; }
-.footer-bottom-links a:hover { color: #A8B89A; }
+.footer-bottom-links a:hover { color: var(--sage); }
 
 /* ===== RESPONSIVE ===== */
 @media (max-width: 1024px) {
@@ -955,6 +521,7 @@ p { margin-bottom: 1rem; }
   .hero-image-wrapper { display: none; }
   .steps-grid { grid-template-columns: repeat(2, 1fr); }
   .steps-grid::before { display: none; }
+  .categories-grid { grid-template-columns: repeat(2, 1fr); }
   .configurator-layout { grid-template-columns: 1fr; }
   .config-preview { position: static; }
   .about-layout { grid-template-columns: 1fr; }
@@ -966,19 +533,10 @@ p { margin-bottom: 1rem; }
 @media (max-width: 768px) {
   .section-padding { padding: 70px 0; }
   .nav-links {
-    display: none;
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100vh;
-    background: rgba(245, 240, 232, 0.98);
-    backdrop-filter: blur(16px);
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 28px;
-    z-index: 999;
+    display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100vh;
+    background: rgba(245, 240, 232, 0.98); backdrop-filter: blur(16px);
+    flex-direction: column; justify-content: center; align-items: center;
+    gap: 28px; z-index: 999;
   }
   .nav-links.active { display: flex; }
   .nav-links a { font-size: 1.1rem; }
@@ -987,7 +545,7 @@ p { margin-bottom: 1rem; }
   .categories-grid { grid-template-columns: 1fr; }
   .gallery-grid { grid-template-columns: repeat(2, 1fr); }
   .gallery-item:nth-child(1) { grid-row: span 1; }
-  .gallery-item:nth-child(1) .gallery-thumb { min-height: 250px; }
+  .gallery-item:nth-child(1) img { min-height: 250px; }
   .testimonials-grid { grid-template-columns: 1fr; max-width: 500px; margin: 0 auto; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 12px; text-align: center; }
@@ -999,14 +557,29 @@ p { margin-bottom: 1rem; }
   .option-btn { text-align: center; }
   .newsletter-form { flex-direction: column; }
 }
+
+/* ===== SKIP LINK (A11Y) ===== */
+.skip-link {
+  position: absolute; top: -100px; left: 16px; padding: 8px 16px;
+  background: var(--bark); color: var(--parchment); border-radius: 4px;
+  z-index: 9999; font-size: 0.85rem;
+  transition: top 0.2s;
+}
+.skip-link:focus { top: 16px; }
 </style>
 </head>
 <body>
 
+<!-- Skip Link for Accessibility -->
+<a href="#main-content" class="skip-link">Skip to main content</a>
+
 <!-- ===== NAVIGATION ===== -->
-<nav class="navbar" id="navbar">
+<nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
   <div class="container">
-    <a href="#" class="nav-logo">Ever<span>bloom</span></a>
+    <a href="#" class="nav-logo" aria-label="Everbloom - Home">
+      <img src="images/everbloom-logo.jpg" alt="Everbloom logo" width="40" height="40">
+      <span class="nav-logo-text">Ever<span>bloom</span></span>
+    </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#how-it-works" onclick="closeNav()">Process</a></li>
       <li><a href="#categories" onclick="closeNav()">Collections</a></li>
@@ -1015,47 +588,34 @@ p { margin-bottom: 1rem; }
       <li><a href="#about" onclick="closeNav()">About</a></li>
       <li><a href="#configurator" class="btn btn-primary" onclick="closeNav()" style="padding: 10px 24px; font-size: 0.78rem;">Start Your Piece</a></li>
     </ul>
-    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle menu">
+    <button class="mobile-toggle" id="mobileToggle" aria-label="Toggle navigation menu" aria-expanded="false">
       <span></span><span></span><span></span>
     </button>
   </div>
 </nav>
 
 <!-- ===== HERO ===== -->
-<section class="hero">
+<section class="hero" id="main-content">
   <div class="hero-bg"></div>
   <div class="hero-decoration top-right"></div>
   <div class="hero-decoration bottom-left"></div>
   <div class="container">
     <div class="hero-content">
-      <span class="hero-eyebrow">Pressed Flower Preservation</span>
+      <span class="eyebrow">Pressed Flower Preservation</span>
       <h1>Your Flowers,<br><em>Forever in Bloom</em></h1>
-      <p class="hero-text">We transform your most meaningful flowers — wedding bouquets, memorial blooms, milestone celebrations — into stunning, handcrafted pressed flower art that preserves the moment forever.</p>
+      <p class="hero-text">We transform your most meaningful flowers &mdash; wedding bouquets, memorial blooms, milestone celebrations &mdash; into stunning, handcrafted pressed flower art that preserves the moment forever.</p>
       <div class="hero-ctas">
-        <a href="#configurator" class="btn btn-primary">Design Your Keepsake</a>
+        <a href="#configurator" class="btn btn-primary">Preserve Your Memories</a>
         <a href="#how-it-works" class="btn btn-secondary">See How It Works</a>
       </div>
     </div>
     <div class="hero-image-wrapper">
       <div class="hero-image-frame">
-        <div class="hero-image-inner">
-          <svg class="hero-flower-icon" viewBox="0 0 80 80" fill="none" stroke="currentColor" stroke-width="1">
-            <circle cx="40" cy="28" r="10"/>
-            <circle cx="28" cy="36" r="10"/>
-            <circle cx="52" cy="36" r="10"/>
-            <circle cx="32" cy="48" r="10"/>
-            <circle cx="48" cy="48" r="10"/>
-            <circle cx="40" cy="40" r="6" fill="currentColor" stroke="none" opacity="0.3"/>
-            <line x1="40" y1="52" x2="40" y2="75" stroke-width="1.5"/>
-            <path d="M40 62 Q32 58 28 62" stroke-width="1"/>
-            <path d="M40 68 Q48 64 52 68" stroke-width="1"/>
-          </svg>
-          <span>Preserved with care</span>
-        </div>
+        <img src="images/pink-bouquet-wood-frame.jpg" alt="Preserved pink and white pressed flower bouquet in a natural wood frame" loading="eager">
       </div>
     </div>
   </div>
-  <div class="hero-scroll-indicator">
+  <div class="hero-scroll-indicator" aria-hidden="true">
     <span>Scroll</span>
     <div class="scroll-line"></div>
   </div>
@@ -1066,40 +626,40 @@ p { margin-bottom: 1rem; }
   <div class="container">
     <div class="text-center reveal">
       <h2>How It Works</h2>
-      <p class="section-subtitle">From your hands to a timeless piece of art — in four simple steps</p>
+      <p class="section-subtitle">From your hands to a timeless piece of art &mdash; in four simple steps</p>
     </div>
     <div class="steps-grid">
       <div class="step-card reveal reveal-delay-1">
         <div class="step-number">
-          <svg viewBox="0 0 36 36"><path d="M18 4 L22 14 L18 12 L14 14 Z M12 14 Q8 18 12 24 L18 32 L24 24 Q28 18 24 14" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 20 L18 18 L22 20" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M18 4 L22 14 L18 12 L14 14 Z M12 14 Q8 18 12 24 L18 32 L24 24 Q28 18 24 14" stroke-linecap="round" stroke-linejoin="round"/><path d="M14 20 L18 18 L22 20" stroke-linecap="round"/></svg>
         </div>
         <span class="step-label">Step 01</span>
-        <h3>Send Your Flowers</h3>
-        <p>Ship your flowers to us using our simple shipping guide. We accept bouquets up to 2 weeks after your event.</p>
+        <h3>Choose Your Preservation</h3>
+        <p>Select from bouquet preservation, childhood keepsakes, temple art, jewelry, or custom frames.</p>
       </div>
       <div class="step-card reveal reveal-delay-2">
         <div class="step-number">
-          <svg viewBox="0 0 36 36"><rect x="6" y="8" width="24" height="20" rx="2"/><line x1="6" y1="14" x2="30" y2="14"/><circle cx="18" cy="22" r="3"/><path d="M15 22 Q15 19 18 19 Q21 19 21 22" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 36 36" aria-hidden="true"><rect x="6" y="8" width="24" height="20" rx="2"/><line x1="6" y1="14" x2="30" y2="14"/><circle cx="18" cy="22" r="3"/><path d="M15 22 Q15 19 18 19 Q21 19 21 22" stroke-linecap="round"/></svg>
         </div>
         <span class="step-label">Step 02</span>
-        <h3>We Preserve Them</h3>
-        <p>Each petal is carefully pressed and preserved using time-honored techniques that maintain color and form.</p>
+        <h3>Ship Your Flowers</h3>
+        <p>Send your blooms using our simple shipping guide, or coordinate local pickup if you're nearby.</p>
       </div>
       <div class="step-card reveal reveal-delay-3">
         <div class="step-number">
-          <svg viewBox="0 0 36 36"><rect x="6" y="4" width="24" height="28" rx="2"/><rect x="10" y="8" width="16" height="20" rx="1"/><circle cx="18" cy="18" r="5"/><path d="M15 15 L18 18 L21 15 M15 21 L18 18 L21 21" stroke-linecap="round"/></svg>
+          <svg viewBox="0 0 36 36" aria-hidden="true"><rect x="6" y="4" width="24" height="28" rx="2"/><rect x="10" y="8" width="16" height="20" rx="1"/><circle cx="18" cy="18" r="5"/><path d="M15 15 L18 18 L21 15 M15 21 L18 18 L21 21" stroke-linecap="round"/></svg>
         </div>
         <span class="step-label">Step 03</span>
-        <h3>Choose Your Frame</h3>
-        <p>Select from our curated collection of wood types, sizes, and layout styles using our interactive configurator.</p>
+        <h3>We Design &amp; Create</h3>
+        <p>Each petal is carefully pressed and arranged into your custom piece using time-honored techniques.</p>
       </div>
       <div class="step-card reveal reveal-delay-4">
         <div class="step-number">
-          <svg viewBox="0 0 36 36"><path d="M8 28 L18 6 L28 28 Z" stroke-linejoin="round"/><path d="M12 22 L18 10 L24 22" stroke-linejoin="round"/><line x1="18" y1="22" x2="18" y2="28"/><circle cx="18" cy="16" r="2"/></svg>
+          <svg viewBox="0 0 36 36" aria-hidden="true"><path d="M8 28 L18 6 L28 28 Z" stroke-linejoin="round"/><path d="M12 22 L18 10 L24 22" stroke-linejoin="round"/><line x1="18" y1="22" x2="18" y2="28"/><circle cx="18" cy="16" r="2"/></svg>
         </div>
         <span class="step-label">Step 04</span>
         <h3>Receive Your Keepsake</h3>
-        <p>Your finished piece is carefully packaged and shipped to your door — a forever reminder of your special moment.</p>
+        <p>Your finished piece is carefully packaged and shipped to your door &mdash; a forever reminder of your special moment.</p>
       </div>
     </div>
   </div>
@@ -1113,42 +673,54 @@ p { margin-bottom: 1rem; }
       <p class="section-subtitle">Every flower tells a story. We help you preserve yours.</p>
     </div>
     <div class="categories-grid">
+
       <div class="category-card reveal reveal-delay-1">
-        <div class="category-bg"></div>
+        <img src="images/colorful-bouquet-wood-frame.jpg" alt="Colorful pressed flower bouquet preservation in natural wood frame" loading="lazy">
         <div class="category-overlay">
-          <svg class="category-icon" viewBox="0 0 48 48" fill="none" stroke="#F5F0E8" stroke-width="1.2"><circle cx="24" cy="16" r="8"/><path d="M16 24 Q10 28 14 36 L24 44 L34 36 Q38 28 32 24"/><line x1="24" y1="24" x2="24" y2="44"/><path d="M20 32 Q24 28 28 32"/></svg>
-          <h3>Wedding Bouquets</h3>
-          <p>Preserve the blooms from your most important day</p>
+          <h3>Bouquet Preservation</h3>
+          <p>Wedding bouquets, funeral flowers &amp; special occasions recreated in pressed flower frames</p>
         </div>
-        <div class="category-arrow"><svg viewBox="0 0 18 18"><line x1="4" y1="14" x2="14" y2="4"/><polyline points="8,4 14,4 14,10"/></svg></div>
+        <div class="category-arrow"><svg viewBox="0 0 18 18" aria-hidden="true"><line x1="4" y1="14" x2="14" y2="4"/><polyline points="8,4 14,4 14,10"/></svg></div>
       </div>
+
       <div class="category-card reveal reveal-delay-2">
-        <div class="category-bg"></div>
+        <img src="images/childhood-keepsake-hazel.jpg" alt="Childhood keepsake with handprints made from pressed flowers and child's name Hazel" loading="lazy">
         <div class="category-overlay">
-          <svg class="category-icon" viewBox="0 0 48 48" fill="none" stroke="#F5F0E8" stroke-width="1.2"><circle cx="24" cy="20" r="6"/><path d="M18 26 Q12 30 16 38 L24 44 L32 38 Q36 30 30 26"/><path d="M18 14 Q24 6 30 14"/><circle cx="24" cy="20" r="2" fill="#F5F0E8" opacity="0.3"/></svg>
-          <h3>Memorial Flowers</h3>
-          <p>Honor and remember with a lasting floral tribute</p>
+          <div class="category-badges"><span class="badge badge-unique">Unique to Everbloom</span></div>
+          <h3>Childhood Keepsakes</h3>
+          <p>Handprints, footprints &amp; childhood memories combined with pressed flowers</p>
         </div>
-        <div class="category-arrow"><svg viewBox="0 0 18 18"><line x1="4" y1="14" x2="14" y2="4"/><polyline points="8,4 14,4 14,10"/></svg></div>
+        <div class="category-arrow"><svg viewBox="0 0 18 18" aria-hidden="true"><line x1="4" y1="14" x2="14" y2="4"/><polyline points="8,4 14,4 14,10"/></svg></div>
       </div>
+
       <div class="category-card reveal reveal-delay-3">
-        <div class="category-bg"></div>
+        <img src="images/temple-art.jpg" alt="LDS temple silhouette created from pressed pink and burgundy flowers in a wood frame" loading="lazy">
         <div class="category-overlay">
-          <svg class="category-icon" viewBox="0 0 48 48" fill="none" stroke="#F5F0E8" stroke-width="1.2"><path d="M24 8 L28 18 L38 20 L30 28 L32 38 L24 32 L16 38 L18 28 L10 20 L20 18 Z"/></svg>
-          <h3>Special Occasions</h3>
-          <p>Birthdays, anniversaries, graduations &amp; more</p>
+          <div class="category-badges"><span class="badge badge-exclusive">Exclusive</span></div>
+          <h3>Temple Art</h3>
+          <p>Temple silhouettes handcrafted from pressed flowers &mdash; a one-of-a-kind offering</p>
         </div>
-        <div class="category-arrow"><svg viewBox="0 0 18 18"><line x1="4" y1="14" x2="14" y2="4"/><polyline points="8,4 14,4 14,10"/></svg></div>
+        <div class="category-arrow"><svg viewBox="0 0 18 18" aria-hidden="true"><line x1="4" y1="14" x2="14" y2="4"/><polyline points="8,4 14,4 14,10"/></svg></div>
       </div>
+
       <div class="category-card reveal reveal-delay-4">
-        <div class="category-bg"></div>
+        <img src="images/white-botanical-gold-frame.jpg" alt="Delicate white pressed flowers with eucalyptus in a gold floating frame" loading="lazy">
         <div class="category-overlay">
-          <svg class="category-icon" viewBox="0 0 48 48" fill="none" stroke="#F5F0E8" stroke-width="1.2"><rect x="8" y="8" width="32" height="32" rx="3"/><rect x="14" y="14" width="20" height="20" rx="1"/><circle cx="24" cy="24" r="6"/><path d="M20 20 L24 24 L28 20"/><path d="M20 28 L24 24 L28 28"/></svg>
-          <h3>Custom Pieces</h3>
-          <p>Bespoke designs tailored to your vision</p>
+          <h3>Custom Frames</h3>
+          <p>Choose your frame size, wood type, single or double glass &mdash; designed to your vision</p>
         </div>
-        <div class="category-arrow"><svg viewBox="0 0 18 18"><line x1="4" y1="14" x2="14" y2="4"/><polyline points="8,4 14,4 14,10"/></svg></div>
+        <div class="category-arrow"><svg viewBox="0 0 18 18" aria-hidden="true"><line x1="4" y1="14" x2="14" y2="4"/><polyline points="8,4 14,4 14,10"/></svg></div>
       </div>
+
+      <div class="category-card reveal reveal-delay-5">
+        <img src="images/christmas-tree.jpg" alt="Christmas tree made from pressed ferns and small flower ornaments in a wood frame" loading="lazy">
+        <div class="category-overlay">
+          <h3>Seasonal &amp; Custom Pieces</h3>
+          <p>Holiday designs, garden arrangements, and bespoke creations tailored to you</p>
+        </div>
+        <div class="category-arrow"><svg viewBox="0 0 18 18" aria-hidden="true"><line x1="4" y1="14" x2="14" y2="4"/><polyline points="8,4 14,4 14,10"/></svg></div>
+      </div>
+
     </div>
   </div>
 </section>
@@ -1158,18 +730,14 @@ p { margin-bottom: 1rem; }
   <div class="container">
     <div class="configurator-layout">
       <div class="config-preview reveal">
-        <div class="preview-frame frame-oak" id="previewFrame">
-          <div class="preview-inner">
+        <div class="preview-frame frame-gold" id="previewFrame">
+          <div class="preview-inner single-glass" id="previewInner">
             <div class="preview-flowers layout-centered" id="previewFlowers">
               <div class="flower-placeholder">
-                <div class="flower-dot"></div>
-                <div class="flower-dot"></div>
-                <div class="flower-dot"></div>
-                <div class="flower-dot"></div>
-                <div class="flower-dot"></div>
-                <div class="flower-dot"></div>
-                <div class="flower-dot"></div>
-                <div class="flower-dot"></div>
+                <div class="flower-dot"></div><div class="flower-dot"></div>
+                <div class="flower-dot"></div><div class="flower-dot"></div>
+                <div class="flower-dot"></div><div class="flower-dot"></div>
+                <div class="flower-dot"></div><div class="flower-dot"></div>
               </div>
             </div>
             <span class="preview-label">Your preserved flowers here</span>
@@ -1183,21 +751,30 @@ p { margin-bottom: 1rem; }
         <div class="config-group">
           <label>Frame Size</label>
           <div class="option-grid" id="sizeOptions">
-            <button class="option-btn active" data-size="8x10" data-price="149">8×10"</button>
-            <button class="option-btn" data-size="11x14" data-price="199">11×14"</button>
-            <button class="option-btn" data-size="16x20" data-price="269">16×20"</button>
-            <button class="option-btn" data-size="20x24" data-price="349">20×24"</button>
+            <button class="option-btn active" data-size="8x10" data-price="149">8&times;10"</button>
+            <button class="option-btn" data-size="11x14" data-price="199">11&times;14"</button>
+            <button class="option-btn" data-size="16x20" data-price="269">16&times;20"</button>
+            <button class="option-btn" data-size="20x24" data-price="349">20&times;24"</button>
           </div>
         </div>
 
         <div class="config-group">
-          <label>Wood Type</label>
-          <div class="option-grid" id="woodOptions">
-            <button class="option-btn active" data-wood="oak" data-price="0">Natural Oak</button>
-            <button class="option-btn" data-wood="walnut" data-price="30">Dark Walnut</button>
-            <button class="option-btn" data-wood="maple" data-price="20">Light Maple</button>
-            <button class="option-btn" data-wood="black" data-price="25">Matte Black</button>
+          <label>Frame Color</label>
+          <div class="option-grid" id="colorOptions">
+            <button class="option-btn active" data-color="gold" data-price="0">Gold</button>
+            <button class="option-btn" data-color="natural" data-price="0">Natural Wood</button>
+            <button class="option-btn" data-color="white" data-price="10">White</button>
+            <button class="option-btn" data-color="black" data-price="15">Black</button>
           </div>
+        </div>
+
+        <div class="config-group">
+          <label>Glass Type</label>
+          <div class="option-grid" id="glassOptions">
+            <button class="option-btn active" data-glass="single" data-price="0">Single Glass</button>
+            <button class="option-btn" data-glass="double" data-price="35">Double Glass</button>
+          </div>
+          <p class="glass-note" id="glassNote">Standard backing with your flowers pressed on a single pane.</p>
         </div>
 
         <div class="config-group">
@@ -1210,20 +787,11 @@ p { margin-bottom: 1rem; }
           </div>
         </div>
 
-        <div class="config-group">
-          <label>Glass Type</label>
-          <div class="option-grid" id="glassOptions">
-            <button class="option-btn active" data-glass="standard" data-price="0">Standard</button>
-            <button class="option-btn" data-glass="uv" data-price="45">UV-Protective</button>
-            <button class="option-btn" data-glass="museum" data-price="85">Museum-Grade</button>
-          </div>
-        </div>
-
         <div class="price-display">
           <div class="price-label">Estimated Price</div>
           <div class="price-value" id="priceValue">$149</div>
           <div class="price-note">Final price may vary based on bouquet size &amp; complexity</div>
-          <a href="#" class="btn btn-primary">Start My Order</a>
+          <a href="#contact" class="btn btn-primary">Start My Order</a>
         </div>
       </div>
     </div>
@@ -1235,36 +803,50 @@ p { margin-bottom: 1rem; }
   <div class="container">
     <div class="text-center reveal">
       <h2>Our Work</h2>
-      <p class="section-subtitle">Each piece is one of a kind — just like the moments they preserve</p>
+      <p class="section-subtitle">Each piece is one of a kind &mdash; just like the moments they preserve</p>
     </div>
     <div class="gallery-grid">
       <div class="gallery-item reveal reveal-delay-1">
-        <div class="gallery-thumb">
-          <div class="gallery-thumb-content">
-            <svg viewBox="0 0 120 120" fill="none" stroke="#F5F0E8" stroke-width="0.8"><circle cx="60" cy="40" r="15"/><circle cx="42" cy="52" r="15"/><circle cx="78" cy="52" r="15"/><circle cx="48" cy="70" r="15"/><circle cx="72" cy="70" r="15"/><circle cx="60" cy="58" r="8" fill="#F5F0E8" opacity="0.15"/><line x1="60" y1="78" x2="60" y2="115"/></svg>
-          </div>
+        <img src="images/pink-bouquet-wood-frame.jpg" alt="Pink and mauve pressed flower bouquet in natural wood frame" loading="lazy">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg>
+          <span class="gallery-label">Wedding Bouquet</span>
         </div>
-        <div class="gallery-overlay"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg></div>
       </div>
       <div class="gallery-item reveal reveal-delay-2">
-        <div class="gallery-thumb"></div>
-        <div class="gallery-overlay"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg></div>
+        <img src="images/temple-art.jpg" alt="LDS temple art made from pressed flowers" loading="lazy">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg>
+          <span class="gallery-label">Temple Art</span>
+        </div>
       </div>
       <div class="gallery-item reveal reveal-delay-3">
-        <div class="gallery-thumb"></div>
-        <div class="gallery-overlay"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg></div>
+        <img src="images/childhood-keepsake-hazel.jpg" alt="Childhood keepsake with handprints and flowers" loading="lazy">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg>
+          <span class="gallery-label">Childhood Keepsake</span>
+        </div>
       </div>
       <div class="gallery-item reveal reveal-delay-2">
-        <div class="gallery-thumb"></div>
-        <div class="gallery-overlay"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg></div>
+        <img src="images/christmas-tree.jpg" alt="Pressed fern Christmas tree with flower ornaments" loading="lazy">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg>
+          <span class="gallery-label">Christmas Tree</span>
+        </div>
       </div>
       <div class="gallery-item reveal reveal-delay-3">
-        <div class="gallery-thumb"></div>
-        <div class="gallery-overlay"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg></div>
+        <img src="images/burgundy-bouquet-gold-frame.jpg" alt="Deep burgundy and pink pressed flowers in gold frame" loading="lazy">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg>
+          <span class="gallery-label">Bouquet Recreation</span>
+        </div>
       </div>
       <div class="gallery-item reveal reveal-delay-4">
-        <div class="gallery-thumb"></div>
-        <div class="gallery-overlay"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg></div>
+        <img src="images/garden-arrangement-dark.jpg" alt="White and blue pressed flower garden arrangement on dark background" loading="lazy">
+        <div class="gallery-overlay">
+          <svg viewBox="0 0 40 40" aria-hidden="true"><circle cx="20" cy="20" r="14"/><line x1="14" y1="20" x2="26" y2="20"/><line x1="20" y1="14" x2="20" y2="26"/></svg>
+          <span class="gallery-label">Garden Arrangement</span>
+        </div>
       </div>
     </div>
   </div>
@@ -1275,13 +857,13 @@ p { margin-bottom: 1rem; }
   <div class="container">
     <div class="shipping-layout">
       <div class="reveal">
-        <span class="about-eyebrow">Shipping Guide</span>
+        <span class="eyebrow">Shipping Guide</span>
         <h2 style="margin-bottom: 12px;">How to Ship<br>Your Flowers</h2>
-        <p style="color: #8B7355; margin-bottom: 32px;">Proper packaging ensures your blooms arrive in the best possible condition for preservation. Follow these simple steps.</p>
+        <p style="color: var(--olivewood); margin-bottom: 32px;">Proper packaging ensures your blooms arrive in the best possible condition for preservation. Follow these simple steps.</p>
         <div class="shipping-steps">
           <div class="shipping-step">
             <div class="shipping-icon">
-              <svg viewBox="0 0 24 24"><path d="M12 3 Q8 8 8 12 Q8 17 12 21 Q16 17 16 12 Q16 8 12 3Z"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 3 Q8 8 8 12 Q8 17 12 21 Q16 17 16 12 Q16 8 12 3Z"/></svg>
             </div>
             <div>
               <h3>Keep Flowers Hydrated</h3>
@@ -1290,7 +872,7 @@ p { margin-bottom: 1rem; }
           </div>
           <div class="shipping-step">
             <div class="shipping-icon">
-              <svg viewBox="0 0 24 24"><rect x="3" y="6" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="9" y1="10" x2="9" y2="20"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="3" y="6" width="18" height="14" rx="2"/><line x1="3" y1="10" x2="21" y2="10"/><line x1="9" y1="10" x2="9" y2="20"/></svg>
             </div>
             <div>
               <h3>Use a Sturdy Box</h3>
@@ -1299,16 +881,16 @@ p { margin-bottom: 1rem; }
           </div>
           <div class="shipping-step">
             <div class="shipping-icon">
-              <svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 16,14"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 16,14"/></svg>
             </div>
             <div>
               <h3>Ship Within 3 Days</h3>
-              <p>For best results, ship flowers within 1–3 days of your event. Choose 2-day or overnight shipping.</p>
+              <p>For best results, ship flowers within 1&ndash;3 days of your event. Choose 2-day or overnight shipping.</p>
             </div>
           </div>
           <div class="shipping-step">
             <div class="shipping-icon">
-              <svg viewBox="0 0 24 24"><path d="M4 12 L8 16 L20 4"/></svg>
+              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 12 L8 16 L20 4"/></svg>
             </div>
             <div>
               <h3>Include Your Order Info</h3>
@@ -1318,6 +900,7 @@ p { margin-bottom: 1rem; }
         </div>
       </div>
       <div class="shipping-image reveal reveal-delay-2">
+        <img src="images/white-botanical-gold-frame.jpg" alt="Delicate white pressed flowers in a gold floating frame" loading="lazy">
         <div class="shipping-badge">
           <strong>Free Shipping Kit</strong>
           <span>We'll send you everything you need</span>
@@ -1332,15 +915,16 @@ p { margin-bottom: 1rem; }
   <div class="container">
     <div class="about-layout">
       <div class="about-image reveal">
+        <img src="images/in-progress-dark.jpg" alt="Pressed flowers being arranged - the artisan process behind Everbloom" loading="lazy">
         <div class="about-accent"></div>
       </div>
       <div class="about-content reveal reveal-delay-2">
-        <span class="about-eyebrow">Our Story</span>
+        <span class="eyebrow">Our Story</span>
         <h2>The Heart Behind<br>Every Petal</h2>
-        <p>Everbloom was born from a simple moment — when I pressed the roses from my own wedding bouquet and realized how much beauty could be preserved in a single flower. What started as a personal keepsake became a passion, and then a calling.</p>
+        <p>Everbloom was born from a simple moment &mdash; when I pressed the roses from my own wedding bouquet and realized how much beauty could be preserved in a single flower. What started as a personal keepsake became a passion, and then a calling.</p>
         <p>Every piece that leaves my studio is crafted entirely by hand. I spend hours with each bouquet, carefully selecting, pressing, and arranging every petal to honor the story it carries. Whether it's a bride's first dance roses or flowers from a grandmother's garden, I treat each project as if it were my own.</p>
-        <p>Based in the Pacific Northwest, I draw inspiration from the natural world around me — the mossy forests, wildflower meadows, and golden light that make this corner of the world so magical.</p>
-        <div class="about-signature">— Mel, Founder &amp; Artist</div>
+        <p>From wedding bouquets to childhood handprints, from temple art to holiday designs &mdash; each creation is a labor of love, designed to preserve the moments that matter most.</p>
+        <div class="about-signature">&mdash; Mel, Founder &amp; Artist</div>
       </div>
     </div>
   </div>
@@ -1355,39 +939,48 @@ p { margin-bottom: 1rem; }
     </div>
     <div class="testimonials-grid">
       <div class="testimonial-card reveal reveal-delay-1">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="testimonial-text">I sent Mel my wedding bouquet not knowing what to expect, and when the finished piece arrived I cried happy tears all over again. It's the most meaningful thing hanging in our home.</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">JR</div>
+          <div class="testimonial-avatar" aria-hidden="true">JR</div>
           <div>
             <div class="testimonial-name">Jessica R.</div>
-            <div class="testimonial-detail">Wedding Bouquet — Oak Frame, 16×20"</div>
+            <div class="testimonial-detail">Wedding Bouquet &mdash; Gold Frame, 16&times;20"</div>
           </div>
         </div>
       </div>
       <div class="testimonial-card reveal reveal-delay-2">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
         <p class="testimonial-text">After we lost my mother, preserving the flowers from her service felt like the right way to hold on to something beautiful from that day. Mel handled everything with so much care and sensitivity.</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">DM</div>
+          <div class="testimonial-avatar" aria-hidden="true">DM</div>
           <div>
             <div class="testimonial-name">David M.</div>
-            <div class="testimonial-detail">Memorial Flowers — Walnut Frame, 11×14"</div>
+            <div class="testimonial-detail">Memorial Flowers &mdash; Natural Wood, 11&times;14"</div>
           </div>
         </div>
       </div>
       <div class="testimonial-card reveal reveal-delay-3">
-        <div class="stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial-text">I've now ordered three pieces from Everbloom — my wedding, my daughter's birth flowers, and our anniversary roses. Mel is an absolute artist. The quality and attention to detail is unmatched.</p>
+        <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
+        <p class="testimonial-text">I've now ordered three pieces from Everbloom &mdash; my wedding, my daughter's birth flowers, and our anniversary roses. Mel is an absolute artist. The quality and attention to detail is unmatched.</p>
         <div class="testimonial-author">
-          <div class="testimonial-avatar">SK</div>
+          <div class="testimonial-avatar" aria-hidden="true">SK</div>
           <div>
             <div class="testimonial-name">Sarah K.</div>
-            <div class="testimonial-detail">Repeat Client — Custom Collection</div>
+            <div class="testimonial-detail">Repeat Client &mdash; Custom Collection</div>
           </div>
         </div>
       </div>
     </div>
+  </div>
+</section>
+
+<!-- ===== CTA BANNER ===== -->
+<section class="cta-banner">
+  <div class="container reveal">
+    <h2>Ready to Preserve Your Memories?</h2>
+    <p>Every flower has a story. Let us help you keep yours forever.</p>
+    <a href="#configurator" class="btn btn-primary">Start Your Keepsake</a>
   </div>
 </section>
 
@@ -1399,10 +992,15 @@ p { margin-bottom: 1rem; }
         <div class="footer-brand-name">Ever<span>bloom</span></div>
         <p>Handcrafted pressed flower preservation, turning your most meaningful blooms into timeless works of art.</p>
         <div class="footer-social">
-          <a href="#" aria-label="Instagram"><svg viewBox="0 0 24 24"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="18" cy="6" r="1.5" fill="rgba(245,240,232,0.7)" stroke="none"/></svg></a>
-          <a href="#" aria-label="Pinterest"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M12 6 Q8 8 8 13 Q8 16 10 17 L11 14 Q9 13 10 10 Q11 7 14 8 Q17 9 16 13 Q15 16 13 15 L12 18 Q11 21 9 20"/></svg></a>
-          <a href="#" aria-label="Facebook"><svg viewBox="0 0 24 24"><path d="M18 2 L15 2 Q12 2 12 5 L12 8 L9 8 L9 12 L12 12 L12 22 L16 22 L16 12 L19 12 L20 8 L16 8 L16 5 Q16 4 17 4 L20 4 L20 2 Z"/></svg></a>
-          <a href="#" aria-label="TikTok"><svg viewBox="0 0 24 24"><path d="M12 2 L12 16 Q12 19 9 19 Q6 19 6 16 Q6 13 9 13"/><path d="M12 2 Q16 2 18 6 L15 6"/></svg></a>
+          <a href="https://instagram.com/_everbl00m_" target="_blank" rel="noopener noreferrer" aria-label="Follow Everbloom on Instagram @_everbl00m_">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="2" y="2" width="20" height="20" rx="5"/><circle cx="12" cy="12" r="5"/><circle cx="18" cy="6" r="1.5" fill="rgba(245,240,232,0.7)" stroke="none"/></svg>
+          </a>
+          <a href="#" aria-label="Follow Everbloom on Pinterest">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="10"/><path d="M12 6 Q8 8 8 13 Q8 16 10 17 L11 14 Q9 13 10 10 Q11 7 14 8 Q17 9 16 13 Q15 16 13 15 L12 18 Q11 21 9 20"/></svg>
+          </a>
+          <a href="#" aria-label="Follow Everbloom on Facebook">
+            <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M18 2 L15 2 Q12 2 12 5 L12 8 L9 8 L9 12 L12 12 L12 22 L16 22 L16 12 L19 12 L20 8 L16 8 L16 5 Q16 4 17 4 L20 4 L20 2 Z"/></svg>
+          </a>
         </div>
       </div>
       <div>
@@ -1428,8 +1026,8 @@ p { margin-bottom: 1rem; }
       <div>
         <h4>Stay in Bloom</h4>
         <p style="font-size: 0.9rem; margin-bottom: 16px;">Get updates on new frame styles, seasonal specials, and behind-the-scenes peeks at the studio.</p>
-        <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent = 'Subscribed!'; this.querySelector('input').value = '';">
-          <input type="email" placeholder="Your email address" required>
+        <form class="newsletter-form" onsubmit="event.preventDefault(); this.querySelector('button').textContent = 'Subscribed!'; this.querySelector('input').value = '';" aria-label="Newsletter signup">
+          <input type="email" placeholder="Your email address" required aria-label="Email address">
           <button type="submit">Join</button>
         </form>
       </div>
@@ -1450,24 +1048,25 @@ p { margin-bottom: 1rem; }
 const navbar = document.getElementById('navbar');
 window.addEventListener('scroll', () => {
   navbar.classList.toggle('scrolled', window.scrollY > 60);
-});
+}, { passive: true });
 
 // ===== MOBILE NAV =====
 const mobileToggle = document.getElementById('mobileToggle');
 const navLinks = document.getElementById('navLinks');
 mobileToggle.addEventListener('click', () => {
+  const isOpen = navLinks.classList.toggle('active');
   mobileToggle.classList.toggle('active');
-  navLinks.classList.toggle('active');
-  document.body.style.overflow = navLinks.classList.contains('active') ? 'hidden' : '';
+  mobileToggle.setAttribute('aria-expanded', isOpen);
+  document.body.style.overflow = isOpen ? 'hidden' : '';
 });
 function closeNav() {
   mobileToggle.classList.remove('active');
   navLinks.classList.remove('active');
+  mobileToggle.setAttribute('aria-expanded', 'false');
   document.body.style.overflow = '';
 }
 
 // ===== SCROLL REVEAL =====
-const revealElements = document.querySelectorAll('.reveal');
 const revealObserver = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
@@ -1476,50 +1075,67 @@ const revealObserver = new IntersectionObserver((entries) => {
     }
   });
 }, { threshold: 0.1, rootMargin: '0px 0px -40px 0px' });
-revealElements.forEach(el => revealObserver.observe(el));
+document.querySelectorAll('.reveal').forEach(el => revealObserver.observe(el));
 
 // ===== FRAME CONFIGURATOR =====
-const state = { size: '8x10', sizePrice: 149, wood: 'oak', woodPrice: 0, layout: 'centered', glass: 'standard', glassPrice: 0 };
+const state = { sizePrice: 149, colorPrice: 0, glassPrice: 0, glass: 'single', color: 'gold', layout: 'centered' };
 const previewFrame = document.getElementById('previewFrame');
+const previewInner = document.getElementById('previewInner');
 const previewFlowers = document.getElementById('previewFlowers');
 const priceValue = document.getElementById('priceValue');
+const glassNote = document.getElementById('glassNote');
+
+const glassDescriptions = {
+  single: 'Standard backing with your flowers pressed on a single pane.',
+  double: 'Floating effect with flowers suspended between two glass panes — elegant and airy.'
+};
 
 function updatePrice() {
-  const total = state.sizePrice + state.woodPrice + state.glassPrice;
-  priceValue.textContent = '$' + total;
+  priceValue.textContent = '$' + (state.sizePrice + state.colorPrice + state.glassPrice);
 }
 
-function setupOptionGroup(containerId, stateKey, priceKey, callback) {
+function setupOptionGroup(containerId, callback) {
   const container = document.getElementById(containerId);
   container.addEventListener('click', (e) => {
     const btn = e.target.closest('.option-btn');
     if (!btn) return;
     container.querySelectorAll('.option-btn').forEach(b => b.classList.remove('active'));
     btn.classList.add('active');
-    if (stateKey) state[stateKey] = btn.dataset[stateKey] || btn.dataset[stateKey.toLowerCase()];
-    if (priceKey && btn.dataset.price !== undefined) state[priceKey] = parseInt(btn.dataset.price);
+    callback(btn);
     updatePrice();
-    if (callback) callback(btn);
   });
 }
 
-setupOptionGroup('sizeOptions', 'size', 'sizePrice');
-setupOptionGroup('woodOptions', 'wood', 'woodPrice', (btn) => {
-  previewFrame.className = 'preview-frame frame-' + btn.dataset.wood;
+setupOptionGroup('sizeOptions', (btn) => {
+  state.sizePrice = parseInt(btn.dataset.price);
 });
-setupOptionGroup('layoutOptions', 'layout', null, (btn) => {
-  previewFlowers.className = 'preview-flowers layout-' + btn.dataset.layout;
-});
-setupOptionGroup('glassOptions', 'glass', 'glassPrice');
 
-// ===== SMOOTH SCROLL FOR ANCHOR LINKS =====
+setupOptionGroup('colorOptions', (btn) => {
+  state.color = btn.dataset.color;
+  state.colorPrice = parseInt(btn.dataset.price);
+  previewFrame.className = 'preview-frame frame-' + state.color;
+});
+
+setupOptionGroup('glassOptions', (btn) => {
+  state.glass = btn.dataset.glass;
+  state.glassPrice = parseInt(btn.dataset.price);
+  previewInner.className = 'preview-inner ' + (state.glass === 'double' ? 'double-glass' : 'single-glass');
+  glassNote.textContent = glassDescriptions[state.glass];
+});
+
+setupOptionGroup('layoutOptions', (btn) => {
+  state.layout = btn.dataset.layout;
+  previewFlowers.className = 'preview-flowers layout-' + state.layout;
+});
+
+// ===== SMOOTH SCROLL =====
 document.querySelectorAll('a[href^="#"]').forEach(anchor => {
   anchor.addEventListener('click', function(e) {
+    const href = this.getAttribute('href');
+    if (href === '#') return;
     e.preventDefault();
-    const target = document.querySelector(this.getAttribute('href'));
-    if (target) {
-      target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-    }
+    const target = document.querySelector(href);
+    if (target) target.scrollIntoView({ behavior: 'smooth', block: 'start' });
   });
 });
 </script>
