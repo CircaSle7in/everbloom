@@ -3,6 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#5C4033">
 <title>Everbloom — Forever in Bloom | Pressed Flower Preservation</title>
 <meta name="description" content="Everbloom preserves your most precious flowers — wedding bouquets, memorial blooms, and special occasion arrangements — into timeless, handcrafted pressed flower keepsakes.">
 <meta name="keywords" content="pressed flower preservation, wedding bouquet preservation, flower framing, memorial flowers, temple art, childhood keepsakes, pressed flower jewelry">
@@ -114,17 +115,18 @@ p { margin-bottom: 1rem; }
 .navbar { position: fixed; top: 0; left: 0; width: 100%; z-index: 1000; padding: 16px 0; transition: all 0.4s; }
 .navbar.scrolled { background: rgba(245,240,232,0.95); backdrop-filter: blur(12px); -webkit-backdrop-filter: blur(12px); padding: 10px 0; box-shadow: var(--shadow-soft); }
 .navbar .container { display: flex; justify-content: space-between; align-items: center; }
-.nav-logo { display: flex; align-items: center; gap: 10px; }
-.nav-logo-icon { width: 40px; height: 40px; object-fit: cover; object-position: center 30%; border-radius: 50%; border: 1.5px solid rgba(107,123,58,0.2); }
-.navbar.scrolled .nav-logo-icon { width: 34px; height: 34px; }
-.nav-logo-text { font-size: 1.2rem; color: var(--bark); }
+.nav-logo { display: flex; align-items: center; }
+.nav-logo-text { font-size: 1.2rem; color: #fff; text-shadow: 0 1px 4px rgba(0,0,0,0.3); transition: color 0.4s, text-shadow 0.4s; }
+.navbar.scrolled .nav-logo-text { color: var(--bark); text-shadow: none; }
 .nav-links { display: flex; gap: 28px; list-style: none; align-items: center; }
-.nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: var(--bark); position: relative; transition: color 0.3s; }
+.nav-links a { font-size: 0.82rem; font-weight: 400; letter-spacing: 0.06em; text-transform: uppercase; color: #fff; text-shadow: 0 1px 3px rgba(0,0,0,0.15); position: relative; transition: color 0.4s, text-shadow 0.4s; }
+.navbar.scrolled .nav-links a { color: var(--bark); text-shadow: none; }
 .nav-links a::after { content: ''; position: absolute; bottom: -4px; left: 0; width: 0; height: 1.5px; background: var(--olive); transition: width 0.3s; }
 .nav-links a:hover::after { width: 100%; }
 .nav-links a:hover { color: var(--olive); }
 .mobile-toggle { display: none; flex-direction: column; gap: 5px; background: none; border: none; padding: 4px; }
-.mobile-toggle span { display: block; width: 22px; height: 2px; background: var(--bark); border-radius: 2px; transition: all 0.3s; }
+.mobile-toggle span { display: block; width: 22px; height: 2px; background: #fff; border-radius: 2px; transition: all 0.3s; }
+.navbar.scrolled .mobile-toggle span { background: var(--bark); }
 .mobile-toggle.active span:nth-child(1) { transform: rotate(45deg) translate(5px,5px); }
 .mobile-toggle.active span:nth-child(2) { opacity: 0; }
 .mobile-toggle.active span:nth-child(3) { transform: rotate(-45deg) translate(5px,-5px); }
@@ -136,14 +138,14 @@ p { margin-bottom: 1rem; }
 .hero-overlay {
   position: absolute; inset: 0;
   background:
-    linear-gradient(135deg, rgba(92,64,51,0.75) 0%, rgba(92,64,51,0.45) 40%, rgba(107,123,58,0.25) 100%),
-    linear-gradient(to top, rgba(92,64,51,0.6) 0%, transparent 50%);
+    linear-gradient(135deg, rgba(92,64,51,0.8) 0%, rgba(92,64,51,0.6) 40%, rgba(107,123,58,0.35) 100%),
+    linear-gradient(to top, rgba(92,64,51,0.7) 0%, transparent 50%);
 }
 .hero .container { position: relative; z-index: 2; }
 .hero-content { max-width: 620px; }
-.hero h1 { color: #fff; margin-bottom: 20px; line-height: 1.15; text-shadow: 0 2px 20px rgba(0,0,0,0.15); }
+.hero h1 { color: #fff; margin-bottom: 20px; line-height: 1.15; text-shadow: 0 2px 8px rgba(0,0,0,0.3); }
 .hero h1 em { font-style: italic; color: var(--sage); }
-.hero-text { font-size: 1.1rem; color: rgba(255,255,255,0.88); margin-bottom: 36px; line-height: 1.8; }
+.hero-text { font-size: 1.1rem; color: rgba(255,255,255,0.88); margin-bottom: 36px; line-height: 1.8; text-shadow: 0 1px 4px rgba(0,0,0,0.2); }
 .hero-ctas { display: flex; gap: 16px; flex-wrap: wrap; }
 .hero-scroll { position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%); z-index: 3; display: flex; flex-direction: column; align-items: center; gap: 6px; color: rgba(255,255,255,0.6); font-size: 0.65rem; letter-spacing: 0.15em; text-transform: uppercase; animation: float 2.5s ease-in-out infinite; }
 .hero-scroll span { width: 1px; height: 32px; background: linear-gradient(to bottom, rgba(255,255,255,0.5), transparent); }
@@ -175,27 +177,59 @@ p { margin-bottom: 1rem; }
 }
 .showcase-grid .showcase-item:first-child { grid-row: span 2; }
 .showcase-item { position: relative; border-radius: var(--radius-md); overflow: hidden; cursor: pointer; }
-.showcase-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; }
+.showcase-item img { width: 100%; height: 100%; object-fit: cover; transition: transform 0.5s ease; background: var(--sand); }
 .showcase-item:hover img { transform: scale(1.04); }
 .showcase-overlay {
   position: absolute; inset: 0;
   background: linear-gradient(to top, rgba(92,64,51,0.7) 0%, rgba(92,64,51,0.05) 55%, transparent 100%);
   display: flex; flex-direction: column; justify-content: flex-end;
-  padding: 20px; opacity: 0; transition: opacity 0.35s;
+  padding: 20px; opacity: 1; transition: opacity 0.35s;
 }
-.showcase-item:hover .showcase-overlay { opacity: 1; }
 .showcase-overlay .badge { margin-bottom: 6px; align-self: flex-start; }
 .showcase-overlay h3 { color: #fff; font-size: 1.15rem; margin-bottom: 2px; }
 .showcase-overlay p { color: rgba(255,255,255,0.8); font-size: 0.82rem; margin: 0; }
+
+/* ===== LIGHTBOX ===== */
+.lightbox-overlay {
+  position: fixed; inset: 0; z-index: 10000;
+  background: rgba(0,0,0,0.88);
+  display: flex; align-items: center; justify-content: center;
+  opacity: 0; visibility: hidden; transition: opacity 0.3s, visibility 0.3s;
+}
+.lightbox-overlay.active { opacity: 1; visibility: visible; }
+.lightbox-content {
+  position: relative; max-width: 90vw; max-height: 90vh;
+  display: flex; flex-direction: column; align-items: center;
+}
+.lightbox-content img {
+  max-width: 90vw; max-height: 80vh; object-fit: contain;
+  border-radius: var(--radius-md); box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+}
+.lightbox-info {
+  position: absolute; bottom: 0; left: 0; right: 0;
+  background: linear-gradient(to top, rgba(0,0,0,0.7) 0%, transparent 100%);
+  padding: 40px 24px 20px; border-radius: 0 0 var(--radius-md) var(--radius-md);
+}
+.lightbox-info h3 { color: #fff; font-size: 1.3rem; margin-bottom: 4px; }
+.lightbox-info p { color: rgba(255,255,255,0.8); font-size: 0.9rem; margin: 0; }
+.lightbox-close {
+  position: absolute; top: -48px; right: 0;
+  width: 40px; height: 40px; border-radius: 50%;
+  background: rgba(255,255,255,0.15); border: 1.5px solid rgba(255,255,255,0.3);
+  color: #fff; font-size: 1.4rem; display: flex; align-items: center; justify-content: center;
+  cursor: pointer; transition: background 0.2s;
+}
+.lightbox-close:hover { background: rgba(255,255,255,0.3); }
 
 /* ===== CONFIGURATOR ===== */
 .configurator { background: #fff; }
 .config-layout { display: grid; grid-template-columns: 280px 1fr; gap: 48px; align-items: start; }
 .config-preview { position: sticky; top: 100px; }
 .preview-frame {
-  width: 100%; aspect-ratio: 3/4; max-height: 360px;
+  width: 160px; aspect-ratio: 4/5; max-height: 360px;
   border-radius: var(--radius-sm); display: flex; align-items: center; justify-content: center;
   position: relative; transition: all 0.4s ease; overflow: hidden;
+  margin: 0 auto;
 }
 .frame-gold { background: linear-gradient(145deg,#d4b06a,#c4a050); box-shadow: inset 0 0 0 14px #c8a858, inset 0 0 0 16px rgba(0,0,0,0.08), var(--shadow-md); }
 .frame-natural { background: linear-gradient(145deg,#c4a46c,#a8884a); box-shadow: inset 0 0 0 14px #b8964e, inset 0 0 0 16px rgba(0,0,0,0.1), var(--shadow-md); }
@@ -207,7 +241,11 @@ p { margin-bottom: 1rem; }
   overflow: hidden; transition: all 0.3s;
 }
 .preview-inner.single-glass { background: var(--parchment); }
-.preview-inner.double-glass { background: transparent; border: 1px solid rgba(200,200,200,0.3); }
+.preview-inner.double-glass {
+  background: var(--parchment);
+  border: 1px solid rgba(200,200,200,0.3);
+  box-shadow: inset 0 0 0 3px rgba(200,200,200,0.4), inset 0 0 12px rgba(0,0,0,0.05);
+}
 .flower-placeholder { display: flex; flex-wrap: wrap; gap: 6px; justify-content: center; max-width: 140px; margin: 0 auto; }
 .flower-dot { width: 18px; height: 18px; border-radius: 50%; transition: all 0.4s; }
 .flower-dot:nth-child(1) { background: var(--sage); }
@@ -242,8 +280,14 @@ p { margin-bottom: 1rem; }
 
 /* ===== SHIPPING ===== */
 .shipping { background: #fff; }
-.shipping-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
-.shipping-steps { display: flex; flex-direction: column; gap: 24px; }
+.shipping-header { text-align: center; margin-bottom: 40px; }
+.shipping-steps-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 28px;
+  max-width: 800px;
+  margin: 0 auto;
+}
 .shipping-step { display: flex; gap: 16px; align-items: flex-start; }
 .shipping-icon {
   flex-shrink: 0; width: 48px; height: 48px; border-radius: 12px;
@@ -253,11 +297,6 @@ p { margin-bottom: 1rem; }
 .shipping-icon svg { width: 22px; height: 22px; stroke: var(--olive); stroke-width: 1.5; fill: none; stroke-linecap: round; stroke-linejoin: round; }
 .shipping-step h3 { margin-bottom: 3px; font-size: 1.05rem; }
 .shipping-step p { font-size: 0.88rem; color: var(--olivewood); margin: 0; }
-.shipping-image { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); position: relative; }
-.shipping-image img { width: 100%; aspect-ratio: 4/5; object-fit: cover; }
-.shipping-badge { position: absolute; bottom: 20px; left: 20px; background: rgba(245,240,232,0.92); backdrop-filter: blur(8px); padding: 14px 20px; border-radius: var(--radius-sm); }
-.shipping-badge strong { display: block; font-family: var(--font-heading); font-size: 1rem; color: var(--bark); }
-.shipping-badge span { font-size: 0.78rem; color: var(--olivewood); }
 
 /* ===== ABOUT ===== */
 .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
@@ -275,8 +314,8 @@ p { margin-bottom: 1rem; }
 .testimonials { background: #fff; }
 .testimonials-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
 .testimonial-card { background: var(--parchment); border-radius: var(--radius-lg); padding: 32px; position: relative; }
-.testimonial-card::before { content: '\201C'; font-family: var(--font-heading); font-size: 4.5rem; color: var(--sand); position: absolute; top: 12px; left: 24px; line-height: 1; }
-.testimonial-text { font-size: 0.92rem; color: var(--bark); line-height: 1.8; margin-bottom: 20px; position: relative; z-index: 1; padding-top: 16px; }
+.testimonial-card::before { content: '\201C'; font-family: var(--font-heading); font-size: 3.5rem; color: var(--sand); position: absolute; top: 8px; left: 20px; line-height: 1; opacity: 0.15; }
+.testimonial-text { font-size: 0.92rem; color: var(--bark); line-height: 1.8; margin-bottom: 20px; position: relative; z-index: 1; padding-top: 24px; }
 .testimonial-author { display: flex; align-items: center; gap: 12px; }
 .testimonial-avatar { width: 42px; height: 42px; border-radius: 50%; display: flex; align-items: center; justify-content: center; font-family: var(--font-heading); font-size: 1rem; color: #fff; font-weight: 600; }
 .testimonial-card:nth-child(1) .testimonial-avatar { background: var(--olive); }
@@ -325,11 +364,9 @@ p { margin-bottom: 1rem; }
   .showcase-grid .showcase-item:first-child { grid-row: span 2; }
   .config-layout { grid-template-columns: 1fr; }
   .config-preview { position: static; display: flex; justify-content: center; }
-  .preview-frame { max-width: 240px; max-height: 300px; }
+  .preview-frame { max-height: 300px; }
   .about-layout { grid-template-columns: 1fr; }
   .about-image { max-height: 360px; }
-  .shipping-layout { grid-template-columns: 1fr; }
-  .shipping-image { max-height: 320px; }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
@@ -342,10 +379,13 @@ p { margin-bottom: 1rem; }
   .steps-grid { grid-template-columns: 1fr 1fr; gap: 24px; }
   .showcase-grid { grid-template-columns: 1fr 1fr; grid-auto-rows: 200px; }
   .showcase-grid .showcase-item:first-child { grid-row: span 1; }
-  .showcase-overlay { opacity: 1; }
   .testimonials-grid { grid-template-columns: 1fr; max-width: 480px; margin: 0 auto; }
   .footer-grid { grid-template-columns: 1fr; }
   .footer-bottom { flex-direction: column; gap: 10px; text-align: center; }
+  .shipping-steps-grid { grid-template-columns: 1fr; }
+  .config-preview { display: flex; justify-content: center; }
+  .preview-frame { max-width: 160px !important; width: 160px !important; }
+  .config-group { margin-bottom: 14px; }
 }
 @media (max-width: 480px) {
   .hero-ctas { flex-direction: column; }
@@ -366,7 +406,6 @@ p { margin-bottom: 1rem; }
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
   <div class="container">
     <a href="#" class="nav-logo" aria-label="Everbloom home">
-      <img src="images/everbloom-logo.jpg" alt="" class="nav-logo-icon" width="40" height="40">
       <span class="nav-logo-text wordmark">Everbloom</span>
     </a>
     <ul class="nav-links" id="navLinks">
@@ -412,13 +451,17 @@ p { margin-bottom: 1rem; }
     <div class="steps-grid">
       <div class="step-card reveal reveal-delay-1">
         <div class="step-icon">
-          <!-- Flower varieties / selection -->
+          <!-- Flower with 5 petals and stem -->
           <svg viewBox="0 0 32 32" aria-hidden="true">
-            <circle cx="16" cy="10" r="4"/><circle cx="10" cy="15" r="4"/><circle cx="22" cy="15" r="4"/>
-            <circle cx="16" cy="12" r="1.5" fill="currentColor" opacity="0.2" stroke="none"/>
-            <line x1="16" y1="18" x2="16" y2="28"/>
-            <path d="M16 22 Q12 20 10 22"/>
-            <path d="M16 25 Q20 23 22 25"/>
+            <circle cx="16" cy="10" r="3.5"/>
+            <circle cx="12.2" cy="13" r="3.5"/>
+            <circle cx="19.8" cy="13" r="3.5"/>
+            <circle cx="13.5" cy="16.8" r="3.5"/>
+            <circle cx="18.5" cy="16.8" r="3.5"/>
+            <circle cx="16" cy="13.5" r="2" fill="var(--olive)" stroke="none" opacity="0.25"/>
+            <line x1="16" y1="19" x2="16" y2="29"/>
+            <path d="M16 23 Q13 21 11 23"/>
+            <path d="M16 26 Q19 24 21 26"/>
           </svg>
         </div>
         <span class="step-num">Step 01</span>
@@ -427,15 +470,13 @@ p { margin-bottom: 1rem; }
       </div>
       <div class="step-card reveal reveal-delay-2">
         <div class="step-icon">
-          <!-- Shipping box with flower -->
+          <!-- Shipping box with open top and arrow -->
           <svg viewBox="0 0 32 32" aria-hidden="true">
-            <rect x="5" y="14" width="22" height="14" rx="2"/>
-            <line x1="5" y1="19" x2="27" y2="19"/>
-            <line x1="16" y1="14" x2="16" y2="19"/>
-            <circle cx="16" cy="9" r="3"/>
-            <circle cx="12" cy="11" r="2.5"/>
-            <circle cx="20" cy="11" r="2.5"/>
-            <line x1="16" y1="12" x2="16" y2="14"/>
+            <path d="M6 14 L6 26 Q6 27 7 27 L25 27 Q26 27 26 26 L26 14"/>
+            <path d="M4 14 L16 10 L28 14"/>
+            <line x1="16" y1="10" x2="16" y2="14"/>
+            <polyline points="12,7 16,3 20,7"/>
+            <line x1="16" y1="3" x2="16" y2="10"/>
           </svg>
         </div>
         <span class="step-num">Step 02</span>
@@ -444,16 +485,12 @@ p { margin-bottom: 1rem; }
       </div>
       <div class="step-card reveal reveal-delay-3">
         <div class="step-icon">
-          <!-- Hands crafting / pressing -->
+          <!-- Scissors - two blades crossed -->
           <svg viewBox="0 0 32 32" aria-hidden="true">
-            <path d="M8 20 Q8 14 12 12 L14 11"/>
-            <path d="M24 20 Q24 14 20 12 L18 11"/>
-            <ellipse cx="16" cy="18" rx="6" ry="4"/>
-            <circle cx="14" cy="17" r="1.5"/>
-            <circle cx="18" cy="17" r="1.5"/>
-            <circle cx="16" cy="19.5" r="1"/>
-            <line x1="8" y1="20" x2="8" y2="26"/>
-            <line x1="24" y1="20" x2="24" y2="26"/>
+            <circle cx="10" cy="24" r="3"/>
+            <circle cx="22" cy="24" r="3"/>
+            <line x1="10" y1="21" x2="22" y2="7"/>
+            <line x1="22" y1="21" x2="10" y2="7"/>
           </svg>
         </div>
         <span class="step-num">Step 03</span>
@@ -462,13 +499,14 @@ p { margin-bottom: 1rem; }
       </div>
       <div class="step-card reveal reveal-delay-4">
         <div class="step-icon">
-          <!-- Framed piece / gift -->
+          <!-- Picture frame with bow/ribbon on top-right -->
           <svg viewBox="0 0 32 32" aria-hidden="true">
-            <rect x="6" y="6" width="20" height="20" rx="2"/>
-            <rect x="9" y="9" width="14" height="14" rx="1"/>
-            <circle cx="16" cy="14" r="2.5"/>
-            <path d="M13 18 Q16 15 19 18"/>
-            <line x1="16" y1="17" x2="16" y2="21"/>
+            <rect x="5" y="7" width="22" height="20" rx="2"/>
+            <rect x="8" y="10" width="16" height="14" rx="1"/>
+            <circle cx="24" cy="7" r="3"/>
+            <path d="M21.5 7 Q24 4 26.5 7"/>
+            <path d="M21.5 7 Q24 3 24 7"/>
+            <path d="M24 7 Q24 3 26.5 7"/>
           </svg>
         </div>
         <span class="step-num">Step 04</span>
@@ -487,14 +525,14 @@ p { margin-bottom: 1rem; }
       <p class="section-subtitle">Every flower tells a story. We help you preserve yours.</p>
     </div>
     <div class="showcase-grid">
-      <div class="showcase-item reveal reveal-delay-1">
+      <div class="showcase-item reveal reveal-delay-1" data-title="Wedding Bouquets" data-desc="Preserve the blooms from your most important day">
         <img src="images/burgundy-bouquet-gold-frame.jpg" alt="Deep burgundy and pink pressed flower bouquet in a gold frame" loading="lazy">
         <div class="showcase-overlay">
           <h3>Wedding Bouquets</h3>
           <p>Preserve the blooms from your most important day</p>
         </div>
       </div>
-      <div class="showcase-item reveal reveal-delay-2">
+      <div class="showcase-item reveal reveal-delay-2" data-title="Childhood Keepsakes" data-desc="Handprints &amp; memories with pressed flowers">
         <img src="images/childhood-keepsake-hazel.jpg" alt="Childhood keepsake with pressed flower handprints and the name Hazel" loading="lazy">
         <div class="showcase-overlay">
           <span class="badge badge-unique">Unique to Everbloom</span>
@@ -502,7 +540,7 @@ p { margin-bottom: 1rem; }
           <p>Handprints &amp; memories with pressed flowers</p>
         </div>
       </div>
-      <div class="showcase-item reveal reveal-delay-3">
+      <div class="showcase-item reveal reveal-delay-3" data-title="Temple Art" data-desc="Temple silhouettes handcrafted from pressed flowers">
         <img src="images/temple-art.jpg" alt="LDS temple silhouette made from pressed pink and burgundy flowers" loading="lazy">
         <div class="showcase-overlay">
           <span class="badge badge-exclusive">Exclusive</span>
@@ -510,28 +548,28 @@ p { margin-bottom: 1rem; }
           <p>Temple silhouettes handcrafted from pressed flowers</p>
         </div>
       </div>
-      <div class="showcase-item reveal reveal-delay-2">
+      <div class="showcase-item reveal reveal-delay-2" data-title="Custom Frames" data-desc="Single or double glass, designed to your vision">
         <img src="images/white-botanical-gold-frame.jpg" alt="Delicate white pressed flowers with eucalyptus in a gold floating frame" loading="lazy">
         <div class="showcase-overlay">
           <h3>Custom Frames</h3>
           <p>Single or double glass, designed to your vision</p>
         </div>
       </div>
-      <div class="showcase-item reveal reveal-delay-3">
+      <div class="showcase-item reveal reveal-delay-3" data-title="Seasonal Designs" data-desc="Holiday &amp; garden creations">
         <img src="images/christmas-tree.jpg" alt="Christmas tree made from pressed ferns with small flower ornaments" loading="lazy">
         <div class="showcase-overlay">
           <h3>Seasonal Designs</h3>
           <p>Holiday &amp; garden creations</p>
         </div>
       </div>
-      <div class="showcase-item reveal reveal-delay-4">
+      <div class="showcase-item reveal reveal-delay-4" data-title="Memorial Flowers" data-desc="Honor and remember with a lasting tribute">
         <img src="images/pink-bouquet-wood-frame.jpg" alt="Pink and mauve pressed flower bouquet in natural wood frame" loading="lazy">
         <div class="showcase-overlay">
           <h3>Memorial Flowers</h3>
           <p>Honor and remember with a lasting tribute</p>
         </div>
       </div>
-      <div class="showcase-item reveal reveal-delay-4">
+      <div class="showcase-item reveal reveal-delay-4" data-title="Garden Arrangements" data-desc="Everyday blooms preserved as art">
         <img src="images/garden-arrangement-dark.jpg" alt="White and blue pressed flower arrangement on dark background" loading="lazy">
         <div class="showcase-overlay">
           <h3>Garden Arrangements</h3>
@@ -541,6 +579,18 @@ p { margin-bottom: 1rem; }
     </div>
   </div>
 </section>
+
+<!-- LIGHTBOX -->
+<div class="lightbox-overlay" id="lightbox" aria-hidden="true">
+  <div class="lightbox-content">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close lightbox">&times;</button>
+    <img id="lightboxImg" src="" alt="">
+    <div class="lightbox-info">
+      <h3 id="lightboxTitle"></h3>
+      <p id="lightboxDesc"></p>
+    </div>
+  </div>
+</div>
 
 <!-- FRAME CONFIGURATOR -->
 <section class="configurator section-padding" id="configurator">
@@ -568,10 +618,10 @@ p { margin-bottom: 1rem; }
         <div class="config-group">
           <label>Frame Size</label>
           <div class="option-grid" id="sizeOptions">
-            <button class="option-btn active" data-price="149">8&times;10"</button>
-            <button class="option-btn" data-price="199">11&times;14"</button>
-            <button class="option-btn" data-price="269">16&times;20"</button>
-            <button class="option-btn" data-price="349">20&times;24"</button>
+            <button class="option-btn active" data-price="149" data-width="160" data-ratio="4/5">8&times;10"</button>
+            <button class="option-btn" data-price="199" data-width="190" data-ratio="11/14">11&times;14"</button>
+            <button class="option-btn" data-price="269" data-width="220" data-ratio="4/5">16&times;20"</button>
+            <button class="option-btn" data-price="349" data-width="250" data-ratio="5/6">20&times;24"</button>
           </div>
         </div>
         <div class="config-group">
@@ -604,7 +654,7 @@ p { margin-bottom: 1rem; }
           <div class="price-label">Estimated Price</div>
           <div class="price-value" id="priceValue">$149</div>
           <div class="price-note">Final price varies by bouquet size &amp; complexity</div>
-          <a href="#contact" class="btn btn-primary">Start My Order</a>
+          <a href="https://ig.me/m/_everbl00m_" target="_blank" rel="noopener noreferrer" class="btn btn-primary">Start My Order</a>
         </div>
       </div>
     </div>
@@ -614,59 +664,50 @@ p { margin-bottom: 1rem; }
 <!-- SHIPPING GUIDE -->
 <section class="shipping section-padding" id="shipping">
   <div class="container">
-    <div class="shipping-layout">
-      <div class="reveal">
-        <span class="eyebrow">Shipping Guide</span>
-        <h2 style="margin-bottom: 10px;">How to Ship<br>Your Flowers</h2>
-        <p style="color:var(--olivewood);margin-bottom:28px;font-size:0.95rem;">Proper packaging ensures your blooms arrive in the best condition for preservation.</p>
-        <div class="shipping-steps">
-          <div class="shipping-step">
-            <div class="shipping-icon">
-              <!-- Water droplet -->
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 C12 4 7 10 7 14 C7 17.3 9.2 20 12 20 C14.8 20 17 17.3 17 14 C17 10 12 4 12 4Z"/></svg>
-            </div>
-            <div>
-              <h3>Keep Flowers Hydrated</h3>
-              <p>Wrap stems in damp paper towels or place in a small bag of water.</p>
-            </div>
-          </div>
-          <div class="shipping-step">
-            <div class="shipping-icon">
-              <!-- Sturdy box -->
-              <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8 L12 3 L21 8 L21 16 L12 21 L3 16Z"/><line x1="12" y1="3" x2="12" y2="12"/><line x1="12" y1="12" x2="21" y2="8"/><line x1="12" y1="12" x2="3" y2="8"/><line x1="12" y1="12" x2="12" y2="21"/></svg>
-            </div>
-            <div>
-              <h3>Use a Sturdy Box</h3>
-              <p>Pack gently with tissue paper or bubble wrap to prevent crushing.</p>
-            </div>
-          </div>
-          <div class="shipping-step">
-            <div class="shipping-icon">
-              <!-- Clock -->
-              <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 16,14"/></svg>
-            </div>
-            <div>
-              <h3>Ship Within 3 Days</h3>
-              <p>For best results, use 2-day or overnight shipping within 1-3 days of your event.</p>
-            </div>
-          </div>
-          <div class="shipping-step">
-            <div class="shipping-icon">
-              <!-- Checklist -->
-              <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
-            </div>
-            <div>
-              <h3>Include Your Order Info</h3>
-              <p>Add your name, order number, and any special instructions.</p>
-            </div>
-          </div>
+    <div class="shipping-header reveal">
+      <span class="eyebrow">Shipping Guide</span>
+      <h2>How to Ship Your Flowers</h2>
+      <p class="section-subtitle">Proper packaging ensures your blooms arrive in the best condition for preservation.</p>
+    </div>
+    <div class="shipping-steps-grid">
+      <div class="shipping-step reveal reveal-delay-1">
+        <div class="shipping-icon">
+          <!-- Water droplet -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 4 C12 4 7 10 7 14 C7 17.3 9.2 20 12 20 C14.8 20 17 17.3 17 14 C17 10 12 4 12 4Z"/></svg>
+        </div>
+        <div>
+          <h3>Keep Flowers Hydrated</h3>
+          <p>Wrap stems in damp paper towels or place in a small bag of water.</p>
         </div>
       </div>
-      <div class="shipping-image reveal reveal-delay-2">
-        <img src="images/in-progress-dark.jpg" alt="Pressed flowers being carefully arranged during the preservation process" loading="lazy">
-        <div class="shipping-badge">
-          <strong>Free Shipping Kit</strong>
-          <span>We send you everything you need</span>
+      <div class="shipping-step reveal reveal-delay-2">
+        <div class="shipping-icon">
+          <!-- Sturdy box -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><path d="M3 8 L12 3 L21 8 L21 16 L12 21 L3 16Z"/><line x1="12" y1="3" x2="12" y2="12"/><line x1="12" y1="12" x2="21" y2="8"/><line x1="12" y1="12" x2="3" y2="8"/><line x1="12" y1="12" x2="12" y2="21"/></svg>
+        </div>
+        <div>
+          <h3>Use a Sturdy Box</h3>
+          <p>Pack gently with tissue paper or bubble wrap to prevent crushing.</p>
+        </div>
+      </div>
+      <div class="shipping-step reveal reveal-delay-3">
+        <div class="shipping-icon">
+          <!-- Clock -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="12" cy="12" r="9"/><polyline points="12,7 12,12 16,14"/></svg>
+        </div>
+        <div>
+          <h3>Ship Within 3 Days</h3>
+          <p>For best results, use 2-day or overnight shipping within 1-3 days of your event.</p>
+        </div>
+      </div>
+      <div class="shipping-step reveal reveal-delay-4">
+        <div class="shipping-icon">
+          <!-- Checklist -->
+          <svg viewBox="0 0 24 24" aria-hidden="true"><rect x="5" y="3" width="14" height="18" rx="2"/><line x1="9" y1="8" x2="15" y2="8"/><line x1="9" y1="12" x2="15" y2="12"/><line x1="9" y1="16" x2="13" y2="16"/></svg>
+        </div>
+        <div>
+          <h3>Include Your Order Info</h3>
+          <p>Add your name, order number, and any special instructions.</p>
         </div>
       </div>
     </div>
@@ -683,10 +724,10 @@ p { margin-bottom: 1rem; }
       <div class="about-content reveal reveal-delay-2">
         <span class="eyebrow">Our Story</span>
         <h2>The Heart Behind<br>Every Petal</h2>
-        <p>Everbloom was born from a simple moment &mdash; when I pressed the roses from my own wedding bouquet and realized how much beauty could be preserved in a single flower. What started as a personal keepsake became a passion, and then a calling.</p>
+        <p>Everbloom was born from a simple moment -- when I pressed the roses from my own wedding bouquet and realized how much beauty could be preserved in a single flower. What started as a personal keepsake became a passion, and then a calling.</p>
         <p>Every piece that leaves my studio is crafted entirely by hand. I spend hours with each bouquet, carefully selecting, pressing, and arranging every petal to honor the story it carries.</p>
-        <p>From wedding bouquets to childhood handprints, from temple art to holiday designs &mdash; each creation is a labor of love, designed to preserve the moments that matter most.</p>
-        <div class="about-signature">&mdash; Mel, Founder &amp; Artist</div>
+        <p>From wedding bouquets to childhood handprints, from temple art to holiday designs -- each creation is a labor of love, designed to preserve the moments that matter most.</p>
+        <div class="about-signature">-- Mel, Founder &amp; Artist</div>
       </div>
     </div>
   </div>
@@ -705,7 +746,7 @@ p { margin-bottom: 1rem; }
         <p class="testimonial-text">I sent Mel my wedding bouquet not knowing what to expect, and when the finished piece arrived I cried happy tears all over again. It's the most meaningful thing hanging in our home.</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar" aria-hidden="true">JR</div>
-          <div><div class="testimonial-name">Jessica R.</div><div class="testimonial-detail">Wedding Bouquet &mdash; Gold Frame, 16&times;20"</div></div>
+          <div><div class="testimonial-name">Jessica R.</div><div class="testimonial-detail">Wedding Bouquet -- Gold Frame, 16&times;20"</div></div>
         </div>
       </div>
       <div class="testimonial-card reveal reveal-delay-2">
@@ -713,15 +754,15 @@ p { margin-bottom: 1rem; }
         <p class="testimonial-text">After we lost my mother, preserving the flowers from her service felt like the right way to hold on to something beautiful. Mel handled everything with so much care and sensitivity.</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar" aria-hidden="true">DM</div>
-          <div><div class="testimonial-name">David M.</div><div class="testimonial-detail">Memorial Flowers &mdash; Natural Wood, 11&times;14"</div></div>
+          <div><div class="testimonial-name">David M.</div><div class="testimonial-detail">Memorial Flowers -- Natural Wood, 11&times;14"</div></div>
         </div>
       </div>
       <div class="testimonial-card reveal reveal-delay-3">
         <div class="stars" aria-label="5 out of 5 stars">&#9733;&#9733;&#9733;&#9733;&#9733;</div>
-        <p class="testimonial-text">I've ordered three pieces from Everbloom &mdash; my wedding, my daughter's birth flowers, and our anniversary roses. Mel is an absolute artist. The quality is unmatched.</p>
+        <p class="testimonial-text">I've ordered three pieces from Everbloom -- my wedding, my daughter's birth flowers, and our anniversary roses. Mel is an absolute artist. The quality is unmatched.</p>
         <div class="testimonial-author">
           <div class="testimonial-avatar" aria-hidden="true">SK</div>
-          <div><div class="testimonial-name">Sarah K.</div><div class="testimonial-detail">Repeat Client &mdash; Custom Collection</div></div>
+          <div><div class="testimonial-name">Sarah K.</div><div class="testimonial-detail">Repeat Client -- Custom Collection</div></div>
         </div>
       </div>
     </div>
@@ -762,10 +803,8 @@ p { margin-bottom: 1rem; }
       <div>
         <h4>Support</h4>
         <ul class="footer-links">
-          <li><a href="#">FAQ</a></li>
-          <li><a href="#">Care Instructions</a></li>
-          <li><a href="#">Shipping Policy</a></li>
-          <li><a href="#">Contact Us</a></li>
+          <li><a href="#shipping">Shipping Policy</a></li>
+          <li><a href="https://instagram.com/_everbl00m_" target="_blank" rel="noopener noreferrer">Contact Us</a></li>
         </ul>
       </div>
       <div>
@@ -812,6 +851,38 @@ function closeNav() {
 const ro = new IntersectionObserver(es => es.forEach(e => { if (e.isIntersecting) { e.target.classList.add('visible'); ro.unobserve(e.target); } }), { threshold: 0.1, rootMargin: '0px 0px -30px 0px' });
 document.querySelectorAll('.reveal').forEach(el => ro.observe(el));
 
+// Lightbox
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightboxImg');
+const lightboxTitle = document.getElementById('lightboxTitle');
+const lightboxDesc = document.getElementById('lightboxDesc');
+const lightboxClose = document.getElementById('lightboxClose');
+
+document.querySelectorAll('.showcase-item').forEach(item => {
+  item.addEventListener('click', () => {
+    const img = item.querySelector('img');
+    const title = item.getAttribute('data-title') || '';
+    const desc = item.getAttribute('data-desc') || '';
+    lightboxImg.src = img.src;
+    lightboxImg.alt = img.alt;
+    lightboxTitle.textContent = title;
+    lightboxDesc.textContent = desc;
+    lightbox.classList.add('active');
+    lightbox.setAttribute('aria-hidden', 'false');
+    document.body.style.overflow = 'hidden';
+  });
+});
+
+function closeLightbox() {
+  lightbox.classList.remove('active');
+  lightbox.setAttribute('aria-hidden', 'true');
+  document.body.style.overflow = '';
+}
+
+lightboxClose.addEventListener('click', closeLightbox);
+lightbox.addEventListener('click', (e) => { if (e.target === lightbox) closeLightbox(); });
+document.addEventListener('keydown', (e) => { if (e.key === 'Escape' && lightbox.classList.contains('active')) closeLightbox(); });
+
 // Configurator
 const state = { sizePrice: 149, colorPrice: 0, glassPrice: 0 };
 const previewFrame = document.getElementById('previewFrame');
@@ -819,7 +890,10 @@ const previewInner = document.getElementById('previewInner');
 const previewFlowers = document.getElementById('previewFlowers');
 const priceValue = document.getElementById('priceValue');
 const glassNote = document.getElementById('glassNote');
-const glassDesc = { single: 'Standard backing with your flowers pressed on a single pane.', double: 'Floating effect with flowers suspended between two glass panes.' };
+const glassDesc = {
+  single: 'Standard backing with your flowers pressed on a single pane.',
+  double: 'Floating effect -- flowers suspended between two glass panes.'
+};
 
 function updatePrice() { priceValue.textContent = '$' + (state.sizePrice + state.colorPrice + state.glassPrice); }
 
@@ -834,12 +908,36 @@ function setupGroup(id, cb) {
   });
 }
 
-setupGroup('sizeOptions', btn => { state.sizePrice = parseInt(btn.dataset.price); });
-setupGroup('colorOptions', btn => { state.colorPrice = parseInt(btn.dataset.price); previewFrame.className = 'preview-frame frame-' + btn.dataset.color; });
-setupGroup('glassOptions', btn => { state.glassPrice = parseInt(btn.dataset.price); previewInner.className = 'preview-inner ' + (btn.dataset.glass === 'double' ? 'double-glass' : 'single-glass'); glassNote.textContent = glassDesc[btn.dataset.glass]; });
+setupGroup('sizeOptions', btn => {
+  state.sizePrice = parseInt(btn.dataset.price);
+  // Dynamic frame size
+  const w = parseInt(btn.dataset.width);
+  const r = btn.dataset.ratio;
+  previewFrame.style.width = w + 'px';
+  previewFrame.style.aspectRatio = r;
+});
+
+setupGroup('colorOptions', btn => {
+  state.colorPrice = parseInt(btn.dataset.price);
+  previewFrame.className = 'preview-frame frame-' + btn.dataset.color;
+  // Preserve dynamic size styles
+  const activeSize = document.querySelector('#sizeOptions .option-btn.active');
+  if (activeSize) {
+    previewFrame.style.width = activeSize.dataset.width + 'px';
+    previewFrame.style.aspectRatio = activeSize.dataset.ratio;
+  }
+});
+
+setupGroup('glassOptions', btn => {
+  state.glassPrice = parseInt(btn.dataset.price);
+  const isDouble = btn.dataset.glass === 'double';
+  previewInner.className = 'preview-inner ' + (isDouble ? 'double-glass' : 'single-glass');
+  glassNote.textContent = glassDesc[btn.dataset.glass];
+});
+
 setupGroup('layoutOptions', btn => { previewFlowers.className = 'preview-flowers layout-' + btn.dataset.layout; });
 
-// Smooth scroll
+// Smooth scroll (skip external links)
 document.querySelectorAll('a[href^="#"]').forEach(a => a.addEventListener('click', function(e) {
   const h = this.getAttribute('href'); if (h === '#') return;
   e.preventDefault(); const t = document.querySelector(h); if (t) t.scrollIntoView({ behavior: 'smooth', block: 'start' });
