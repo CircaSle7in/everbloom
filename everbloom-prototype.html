@@ -10,7 +10,8 @@
 <!-- Open Graph -->
 <meta property="og:title" content="Everbloom — Forever in Bloom">
 <meta property="og:description" content="Handcrafted pressed flower preservation. Wedding bouquets, memorial flowers, temple art, childhood keepsakes, and custom pieces.">
-<meta property="og:image" content="images/colorful-bouquet-wood-frame.jpg">
+<meta property="og:image" content="https://everbloombymel.com/images/colorful-bouquet-wood-frame.jpg">
+<meta property="og:url" content="https://everbloombymel.com">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="en_US">
 
@@ -18,7 +19,9 @@
 <meta name="twitter:card" content="summary_large_image">
 <meta name="twitter:title" content="Everbloom — Forever in Bloom">
 <meta name="twitter:description" content="Handcrafted pressed flower preservation. Wedding bouquets, memorial flowers, temple art & more.">
-<meta name="twitter:image" content="images/colorful-bouquet-wood-frame.jpg">
+<meta name="twitter:image" content="https://everbloombymel.com/images/colorful-bouquet-wood-frame.jpg">
+
+<link rel="canonical" href="https://everbloombymel.com">
 
 <!-- Favicon (inline SVG) -->
 <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 32 32'><circle cx='16' cy='12' r='5' fill='none' stroke='%236B7B3A' stroke-width='1.5'/><circle cx='11' cy='16' r='5' fill='none' stroke='%236B7B3A' stroke-width='1.5'/><circle cx='21' cy='16' r='5' fill='none' stroke='%236B7B3A' stroke-width='1.5'/><circle cx='16' cy='14' r='2.5' fill='%236B7B3A' opacity='0.3'/><line x1='16' y1='20' x2='16' y2='30' stroke='%236B7B3A' stroke-width='1.5'/></svg>">
@@ -34,7 +37,7 @@
   "@type": "LocalBusiness",
   "name": "Everbloom",
   "description": "Handcrafted pressed flower preservation — wedding bouquets, memorial flowers, temple art, childhood keepsakes, and custom framed pieces.",
-  "url": "https://everbloom.com",
+  "url": "https://everbloombymel.com",
   "image": "images/everbloom-logo.jpg",
   "sameAs": ["https://instagram.com/_everbl00m_"],
   "founder": {
@@ -175,10 +178,9 @@ p { margin-bottom: 1rem; }
   box-shadow: var(--shadow-soft);
 }
 .navbar .container { display: flex; justify-content: space-between; align-items: center; }
-.nav-logo { display: flex; align-items: center; gap: 10px; }
-.nav-logo img { height: 40px; width: 40px; border-radius: 50%; object-fit: cover; }
-.nav-logo-text { font-family: var(--font-heading); font-size: 1.6rem; font-weight: 600; color: var(--bark); letter-spacing: 0.02em; }
-.nav-logo-text span { color: var(--olive); }
+.nav-logo { display: flex; align-items: center; }
+.nav-logo img { height: 52px; width: auto; object-fit: contain; transition: height 0.4s; }
+.navbar.scrolled .nav-logo img { height: 40px; }
 .nav-links { display: flex; gap: 32px; list-style: none; align-items: center; }
 .nav-links a {
   font-size: 0.85rem; font-weight: 400; letter-spacing: 0.06em;
@@ -474,8 +476,14 @@ p { margin-bottom: 1rem; }
 .footer { background: var(--bark); color: rgba(245, 240, 232, 0.75); padding: 80px 0 0; }
 .footer-grid { display: grid; grid-template-columns: 2fr 1fr 1fr 1.5fr; gap: 48px; margin-bottom: 60px; }
 .footer h4 { color: var(--parchment); font-size: 1rem; margin-bottom: 20px; }
-.footer-brand-name { font-family: var(--font-heading); font-size: 1.8rem; color: var(--parchment); margin-bottom: 12px; font-weight: 600; }
-.footer-brand-name span { color: var(--sage); }
+/* Wordmark: matches the logo's all-caps serif treatment */
+.wordmark {
+  font-family: var(--font-heading);
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+  font-weight: 500;
+}
+.footer-brand-name { font-size: 1.8rem; color: var(--parchment); margin-bottom: 12px; }
 .footer-brand p { font-size: 0.9rem; line-height: 1.8; margin-bottom: 20px; }
 .footer-social { display: flex; gap: 12px; }
 .footer-social a {
@@ -577,8 +585,7 @@ p { margin-bottom: 1rem; }
 <nav class="navbar" id="navbar" role="navigation" aria-label="Main navigation">
   <div class="container">
     <a href="#" class="nav-logo" aria-label="Everbloom - Home">
-      <img src="images/everbloom-logo.jpg" alt="Everbloom logo" width="40" height="40">
-      <span class="nav-logo-text">Ever<span>bloom</span></span>
+      <img src="images/everbloom-logo.jpg" alt="Everbloom - Forever in Bloom" width="52" height="52">
     </a>
     <ul class="nav-links" id="navLinks">
       <li><a href="#how-it-works" onclick="closeNav()">Process</a></li>
@@ -989,7 +996,7 @@ p { margin-bottom: 1rem; }
   <div class="container">
     <div class="footer-grid">
       <div class="footer-brand">
-        <div class="footer-brand-name">Ever<span>bloom</span></div>
+        <div class="footer-brand-name wordmark">Everbloom</div>
         <p>Handcrafted pressed flower preservation, turning your most meaningful blooms into timeless works of art.</p>
         <div class="footer-social">
           <a href="https://instagram.com/_everbl00m_" target="_blank" rel="noopener noreferrer" aria-label="Follow Everbloom on Instagram @_everbl00m_">
@@ -1033,7 +1040,7 @@ p { margin-bottom: 1rem; }
       </div>
     </div>
     <div class="footer-bottom">
-      <span>&copy; 2026 Everbloom. All rights reserved.</span>
+      <span>&copy; 2026 <span class="wordmark" style="font-size: inherit;">Everbloom</span>. All rights reserved.</span>
       <div class="footer-bottom-links">
         <a href="#">Privacy Policy</a>
         <a href="#">Terms of Service</a>
