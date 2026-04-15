@@ -301,11 +301,7 @@ p { margin-bottom: 1rem; }
 /* ===== ABOUT ===== */
 .about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
 .about-image { border-radius: 16px; overflow: hidden; box-shadow: var(--shadow-md); position: relative; }
-.about-image-placeholder {
-  aspect-ratio: 3/4; background: linear-gradient(135deg, var(--sage) 0%, var(--olive) 50%, var(--bark) 100%);
-  display: flex; align-items: center; justify-content: center; color: rgba(255,255,255,0.6);
-  font-family: var(--font-heading); font-size: 1rem; font-style: italic; text-align: center; padding: 40px;
-}
+.about-image img { width: 100%; aspect-ratio: 3/5; object-fit: cover; object-position: 50% 15%; }
 .about-content h2 { margin-bottom: 16px; }
 .about-content p { color: var(--olivewood); }
 .about-signature { font-family: var(--font-heading); font-style: italic; font-size: 1.2rem; color: var(--bark); margin-top: 20px; }
@@ -366,7 +362,7 @@ p { margin-bottom: 1rem; }
   .config-preview { position: static; display: flex; justify-content: center; }
   .preview-frame { max-height: 300px; }
   .about-layout { grid-template-columns: 1fr; }
-  .about-image { max-height: 360px; }
+  .about-image { }
   .footer-grid { grid-template-columns: repeat(2, 1fr); }
 }
 @media (max-width: 768px) {
@@ -576,6 +572,13 @@ p { margin-bottom: 1rem; }
           <p>Everyday blooms preserved as art</p>
         </div>
       </div>
+      <div class="showcase-item reveal reveal-delay-3" data-title="Bouquet Preservation" data-desc="Blue &amp; white blooms in a floating wood frame">
+        <img src="images/blue-white-bouquet-wood-frame.jpg" alt="Blue hydrangea and white pressed flower bouquet preserved in a floating wooden frame" loading="lazy">
+        <div class="showcase-overlay">
+          <h3>Bouquet Preservation</h3>
+          <p>Blue &amp; white blooms in a floating wood frame</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
@@ -719,7 +722,7 @@ p { margin-bottom: 1rem; }
   <div class="container">
     <div class="about-layout">
       <div class="about-image reveal">
-        <div class="about-image-placeholder">Photo of Mel coming soon</div>
+        <img src="images/mel-profile.jpg" alt="Melody, founder and artist of Everbloom, standing outdoors in front of pine trees and mountains" loading="lazy">
       </div>
       <div class="about-content reveal reveal-delay-2">
         <span class="eyebrow">Our Story</span>
